@@ -5,8 +5,7 @@
     <title>Microprocessors</title>
 </head>
 <style>
-    /* The animation code */
-    @keyframes fadeInTitle {
+    @keyframes fadeInTitle1 {
         from {
             opacity: 0;
             color: red;
@@ -19,6 +18,21 @@
             margin-left: 75%;
         }
     }
+
+    @keyframes fadeInTitle2 {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 0;
+        }
+
+        to {
+            opacity: 1;
+            color: yellow;
+            margin-left: 10%;
+        }
+    }
+
 
     @keyframes fadeInparagraph1 {
         from {
@@ -61,7 +75,6 @@
         }
     }
 
-
     body {
         background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/waterfall.jpg');
         height: 10%;
@@ -82,10 +95,11 @@
         box-shadow: revert;
     }
 
-    p1 { font-size: 256px; margin-left: 75%; color: lawngreen; animation: fadeInTitle; animation-duration: 2s;}
+    p1 { font-size: 256px; margin-left: 75%; color: lawngreen; animation: fadeInTitle1; animation-duration: 2s;}
     p2 { font-size: 128px; margin-left: 75%; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
     p3 { font-size: 128px; margin-left: 10%; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
-    p4 { font-size: 128px; margin-left: 10%; color: white; animation: fadeInparagraph3; animation-duration: 4s; }
+    p4 { font-size: 96px; }
+    p5 { font-size: 256px; margin-left: 10%; color: lawngreen; animation: fadeInTitle2; animation-duration: 2s;}
 
     img {
         border: 0px solid;
@@ -119,13 +133,13 @@
     }
 
     .container {
-        position: relative;
+        position:center;
     }
 
     .text-block {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 10%;
+        margin-left: 10%;
         background-color: none;
         color: white;
         padding-left: 20px;
@@ -137,12 +151,28 @@
 <body>
     <div class="container">
         <div class="text-block">
-            <div>
-                <p4>1.What a beautiful sunrise test test test test test test test test test</p4>
-            </div>
-            <div>
-                <p4>2.What a beautiful sunrise test1 test1 test1 test1 test1 test1 test1 test1 test1</p4>
-            </div>
+            <div><p5>PERSONAL PROFILE</p5></div>
+            <div><p4>I am an Embedded Software Developer with over 25 years of experience. This </p4></div>
+            <div><p4>has comprised mainly of work within the telecommunications industry.       </p4></div>
+            <div><p4>This includes Mobile Radio equipment for ten years and six years working   </p4></div>
+            <div><p4>on SCADA radio products.                                                   </p4></div>
+            <div><p4>-</p4></div>
+            <div><p4>I have also worked in the Consumer Products, Household Power Management,   </p4></div>
+            <div><p4>Automotive and, most recently, Fire Detection Systems.                     </p4></div>
+            <div><p4>-</p4></div>
+            <div><p4>I enjoy working in all stages of software development and have used many   </p4></div>
+            <div><p4>platforms (both large and small).                                          </p4></div>
+            <div><p4>-</p4></div>
+            <div><p4>I have experience in C and assembly language equally. I have worked on a   </p4></div>
+            <div><p4>range of processors and Operating Systems. The processors include NXP      </p4></div>
+            <div><p4> Renesas, Motorola HC11, Atmel, ST and TI DSPs.                            </p4></div>
+            <div><p4>-</p4></div>
+            <div><p4>I am comfortable working on driver layer software as well as the core level</div><p4>
+            <div><p4>and application layers within the embedded domain.                         </div><p4>
+            <div><p4>-</p4></div>
+            <div><p4>The operating systems I have used range in size from proprietary NEC       </p4></div>
+            <div><p4>Exchange OS down to a small ECos, Micrium MicroC-OS, Bare Metal as well    </p4></div>
+            <div><p4>as my own proprietary scheduler designs.                                   </p4></div>
         </div>
     </div>
     <div><img src="img/me-glastonbury.jpg" alt="Personal Details"></div>
