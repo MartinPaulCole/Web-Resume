@@ -20,7 +20,7 @@
         }
     }
 
-    @keyframes fadeInparagraph {
+    @keyframes fadeInparagraph1 {
         from {
             opacity: 0;
             color: red;
@@ -33,6 +33,34 @@
             margin-left: 75%;
         }
     }
+
+    @keyframes fadeInparagraph2 {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 0%;
+        }
+
+        to {
+            opacity: 1;
+            color: red;
+            margin-left: 10%;
+        }
+    }
+    @keyframes fadeInparagraph3 {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 0%;
+        }
+
+        to {
+            opacity: 1;
+            color: white;
+            margin-left: 10%;
+        }
+    }
+
 
     body {
         background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/waterfall.jpg');
@@ -55,7 +83,9 @@
     }
 
     p1 { font-size: 256px; margin-left: 75%; color: lawngreen; animation: fadeInTitle; animation-duration: 2s;}
-    p2 { font-size: 128px; margin-left: 75%; color: red; animation: fadeInparagraph; animation-duration: 4s; }
+    p2 { font-size: 128px; margin-left: 75%; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
+    p3 { font-size: 128px; margin-left: 10%; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
+    p4 { font-size: 128px; margin-left: 10%; color: white; animation: fadeInparagraph3; animation-duration: 4s; }
 
     img {
         border: 0px solid;
@@ -67,11 +97,55 @@
         margin-right: 20px;
     }
 
+    @keyframes fadeInBrief {
+        from {
+            opacity: 0;
+            color: aqua;
+            margin-left: 25%;
+        }
+
+        to {
+            opacity: 1;
+            color: white;
+            margin-left: 25%;
+        }
+    }
+
+    .portrait {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 2000px;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .text-block {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: none;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 </style>
 
 <html>
 <body>
-    <div><img src="img/me-glastonbury.jpg" alt="Personal Details" /></div>
+    <div class="container">
+        <div class="text-block">
+            <div>
+                <p4>1.What a beautiful sunrise test test test test test test test test test</p4>
+            </div>
+            <div>
+                <p4>2.What a beautiful sunrise test1 test1 test1 test1 test1 test1 test1 test1 test1</p4>
+            </div>
+        </div>
+    </div>
+    <div><img src="img/me-glastonbury.jpg" alt="Personal Details"></div>
     <div><p1>ADDRESS</p1></div>
     <div><p2>1/10 Downing Street</p2></div>
     <div><p2>Crofton Downs</p2></div>
