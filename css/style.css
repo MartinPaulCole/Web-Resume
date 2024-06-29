@@ -1,0 +1,52 @@
+﻿body {
+    background-image: url('img/circuit.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+p1, p2, p3, p4, p5, p6, p7, p8 {
+    font-family: 'Agency FB';
+    font-size: 128px;
+    text-align: left;
+    animation: fadeInparagraph;
+    color: greenyellow;
+    animation-duration: 1s;
+}
+
+p1 {
+    font-size: 512px;
+}
+
+p2 {
+    animation-duration: 2s;
+}
+
+p3 {
+    animation-duration: 2s;
+}
+
+p4 {
+    animation-duration: 2s;
+}
+
+p5 {
+    animation-duration: 2s;
+}
+
+p6 {
+    animation-duration: 2s;
+}
+
+p7 {
+    animation-duration: 2s;
+}
+
+p8 {
+    animation-duration: 2s;
+}
+
+p9 {
+    animation-duration: 2s;
+}

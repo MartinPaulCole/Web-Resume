@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microprocessors</title>
+</head>
+<style>
+    /* The animation code */
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 100%;
+        }
+
+        to {
+            opacity: 1;
+            color: yellow;
+            margin-left: 20%;
+        }
+    }
+
+    @keyframes fadeInparagraph {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 100%;
+        }
+
+        to {
+            opacity: 1;
+            color: red;
+            margin-left: 25%;
+        }
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/waterfall.jpg');
+        height: 10%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        animation: fadeInTitle ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    p1, p2 {
+        font-family: 'Agency FB';
+        font-size: 128px;
+        text-align: center;
+        animation: fadeInparagraph;
+        color: lawngreen;
+        background: border-box;
+        box-shadow: revert;
+        animation-duration: 2s;
+        position: center;
+        margin-left: 25%;
+    }
+
+    p1 { font-size: 256px; margin-left: 20%;  animation: fadeInTitle; animation-duration: 2s;}
+    p2 { font-size: 128px; color: red; animation-duration: 4s;}
+
+    img {
+        border: 0px solid;
+        border-radius: 256px;
+        padding: 5px;
+        width: 600px;
+        margin-top: 0%;
+        margin-left: 75%;
+        margin-right: 20px;
+    }
+
+</style>
+
+<html>
+<body>
+    <div><img src="img/Me-Glastonbury.jpg" alt="Personal Details" /></div>
+    <div><p1>ADDRESS</p1></div>
+    <div><p2>1/10 Downing Street</p2></div>
+    <div><p2>Crofton Downs</p2></div>
+    <div><p2>Wellington</p2></div>
+    <div><p2>New Zealand</p2></div>
+    <div><p1>PHONE</p1></div>
+    <div><p2>NZ: (021) 081 08901</p2></div>
+    <div><p2>UK: (0739) 216 7769</p2></div>
+    <div><p1>EMAIL</p1></div>
+    <div><p2>martin.p.cole@gmail.com</p2></div>
+</body>
+</html>

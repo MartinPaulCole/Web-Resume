@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microprocessors</title>
+</head>
+<style>
+    /* The animation code */
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 100%;
+        }
+
+        to {
+            opacity: 1;
+            color: yellow;
+            margin-left: 25%;
+        }
+    }
+
+    @keyframes fadeInparagraph {
+        from {
+            opacity: 0;
+            color: red;
+            margin-left: 100%;
+        }
+
+        to {
+            opacity: 1;
+            color: yellow;
+            margin-left: 75%;
+        }
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
+        height: 10%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    p1, p2, p3, p4, p5, p6, p7, p8, p9 {
+        font-family: 'Agency FB';
+        font-size: 128px;
+        text-align: center;
+        animation: fadeInparagraph;
+        color: lawngreen;
+        background: border-box;
+        box-shadow: revert;
+        animation-duration: 2s;
+        position: center;
+        margin-left: 75%;
+    }
+
+    p1 { font-size: 512px; margin-left: 25%;  animation: fadeInTitle; animation-duration: 2s;}
+    p2 { animation-duration: 4s; }
+    p3 { animation-duration: 4s; }
+    p4 { animation-duration: 4s; }
+    p5 { animation-duration: 4s; }
+    p6 { animation-duration: 4s; }
+    p7 { animation-duration: 4s; }
+    p8 { animation-duration: 4s; }
+    p9 { animation-duration: 4s; }
+</style>
+<html>
+<body>
+    <div><p1>Microprocessors</p1></div>
+    <div><p2>- Renesas</p2></div>
+    <div><p3>- Atmel</p3></div>
+    <div><p4>- Coldfire</p4></div>
+    <div><p5>- NXP</p5></div>
+    <div><p6>- Motorola</p6></div>
+    <div><p7>- Texas Instruments</p7></div>
+    <div><p8>- SPARC</p8></div>
+    <div><p9>- ST Micro</p9></div>
+</body>
+</html>
