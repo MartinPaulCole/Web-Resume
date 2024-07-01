@@ -9,13 +9,13 @@
     @keyframes fadeInTitle {
         from {
             opacity: 0;
-            color: red;
-            margin-left: 100%;
+            color: white;
+            margin-left: 50%;
         }
 
         to {
             opacity: 1;
-            color: yellow;
+            color: blue;
             margin-left: 10%;
         }
     }
@@ -23,20 +23,19 @@
     @keyframes fadeInparagraph {
         from {
             opacity: 0;
-            color: red;
-            margin-left: 100%;
+            color: white;
+            margin-left: 80%;
         }
 
         to {
             opacity: 1;
-            color: yellow;
-            margin-left: 75%;
+            color: cyan;
+            margin-left: 10%;
         }
     }
 
     body {
-        background-image: linear-gradient(rgba(0, 0.7, 0.7, 0.7), rgba(0, 0.7, 0.7, 0.7)), url('img/circuit.jpg');
-        opacity: 0.5;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/taipei-tower-distance.jpg');
         height: 10%;
         background-position: center;
         background-repeat: no-repeat;
@@ -47,21 +46,8 @@
         animation-fill-mode: forwards;
     }
 
-    p1, p2 {
-        font-family: 'Agency FB';
-        font-size: 128px;
-        text-align: center;
-        animation: fadeInparagraph;
-        color: lawngreen;
-        background: border-box;
-        box-shadow: revert;
-        animation-duration: 2s;
-        position: center;
-        margin-left: 75%;
-    }
-
-    p1 { font-size: 512px; color: yellow; margin-left: 10%;  animation: fadeInTitle; animation-duration: 2s;}
-    p2 { color: yelow; animation-duration: 4s; }
+    p1 { font-size: 256px; color: blue; margin-left: 10%; animation: fadeInTitle; animation-duration: 2s;}
+    p2 { font-size: 96px; color: cyan; margin-left: 10%; animation: fadeInParagrah; animation-duration: 4s; }
  
     .container {
         position:center;
@@ -77,12 +63,22 @@
         padding-right: 20px;
     }
 
+    img {
+        border: 0px solid;
+        border-radius: 256px;
+        padding: 5px;
+        width: 700px;
+        height: 700px;
+        margin-top: 0%;
+        margin-left: 75%;
+        margin-right: 20px;
+    }
 </style>
 <html>
 <body>
     <div class="container">
-        <p1>RENESAS MICRO<br><br><br></p1>
         <div class="text-block"><p2><br>
+            <p1>RENESAS MICRO<br><br><br></p1>
             Utilising Renesas M16C Processors to control oven temperature and graphical user displays.<br>                                                   
             The main controller was located in the oven core and performed PID control of the oven<br>
             temperature based on the cooking function selected by the user.<br>   
@@ -95,5 +91,6 @@
             The IDE used was HEW and KD30 and E8 on-chip debugger.</p2>
         </div>
     </div>
+    <img src="img/circuit.jpg" alt="Microprocessor" padding-bottom="20px">
  </body>
 </html>

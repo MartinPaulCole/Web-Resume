@@ -2,15 +2,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microprocessors</title>
+    <title>Atmel</title>
 </head>
 <style>
     /* The animation code */
     @keyframes fadeInTitle {
         from {
             opacity: 0;
-            color: red;
-            margin-left: 100%;
+            color: white;
+            margin-left: 50%;
+        }
+
+        to {
+            opacity: 1;
+            color: orangered;
+            margin-left: 10%;
+        }
+    }
+
+    @keyframes fadeInparagraph {
+        from {
+            opacity: 0;
+            color: white;
+            margin-left: 80%;
         }
 
         to {
@@ -20,22 +34,8 @@
         }
     }
 
-    @keyframes fadeInparagraph {
-        from {
-            opacity: 0;
-            color: red;
-            margin-left: 100%;
-        }
-
-        to {
-            opacity: 1;
-            color: yellow;
-            margin-left: 75%;
-        }
-    }
-
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/eastborne.jpg');
         height: 10%;
         background-position: center;
         background-repeat: no-repeat;
@@ -46,22 +46,9 @@
         animation-fill-mode: forwards;
     }
 
-    p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 {
-        font-family: 'Agency FB';
-        font-size: 128px;
-        text-align: center;
-        animation: fadeInparagraph;
-        color: lawngreen;
-        background: border-box;
-        box-shadow: revert;
-        animation-duration: 2s;
-        position: center;
-        margin-left: 75%;
-    }
+    p1 { font-size: 256px; color: orangered; margin-left: 10%;  animation: fadeInTitle; animation-duration: 2s;}
+    p2 { font-size: 96px; color: yellow;  margin-left: 10%; animation: fadeInParagraph; animation-duration: 4s; }
 
-    p1 { font-size: 512px; color: yellow; margin-left: 10%;  animation: fadeInTitle; animation-duration: 2s;}
-    p2, p3, p4, p5, p6, p7, p8, p9 { color: red; animation-duration: 4s; }
- 
     .container {
         position:center;
     }
@@ -76,18 +63,30 @@
         padding-right: 20px;
     }
 
+    img {
+        border: 0px solid;
+        border-radius: 256px;
+        padding: 5px;
+        width: 700px;
+        height: 700px;
+        margin-top: 0%;
+        margin-left: 75%;
+        margin-right: 20px;
+    }
 </style>
 <html>
 <body>
     <div class="container">
-        <p1>ATMEL MICRO<br><br><br></p1>
-        <div class="text-block"><p4><br>
+        <div class="text-block">
+            <p1>ATMEL MICRO<br><br><br></p1>
+            <p2><br>
             Utilising Atmel AVR micorprocessors to communicate between an ARM M4 processor<br>                                                   
             and the main proprietary communications link connected main a fire alarm panel.<br>
             temperature based on the cooking function selected by the user.<br>   
             <br>
-            The IDE used was AVR/Atmel/Microchip Studio, MPLABS and Flash Magic.</p4>
+            The IDE used was AVR/Atmel/Microchip Studio, MPLABS and Flash Magic.</p2>
         </div>
     </div>
+    <img src="img/microprocessor.jpg" alt="Microprocessor" padding-bottom="20px">
 </body>
 </html>
