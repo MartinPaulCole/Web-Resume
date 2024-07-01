@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microprocessors</title>
+    <title>Renesas</title>
 </head>
 <style>
     /* The animation code */
@@ -35,7 +35,8 @@
     }
 
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
+        background-image: linear-gradient(rgba(0, 0.7, 0.7, 0.7), rgba(0, 0.7, 0.7, 0.7)), url('img/circuit.jpg');
+        opacity: 0.5;
         height: 10%;
         background-position: center;
         background-repeat: no-repeat;
@@ -46,7 +47,7 @@
         animation-fill-mode: forwards;
     }
 
-    p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 {
+    p1, p2 {
         font-family: 'Agency FB';
         font-size: 128px;
         text-align: center;
@@ -60,7 +61,7 @@
     }
 
     p1 { font-size: 512px; color: yellow; margin-left: 10%;  animation: fadeInTitle; animation-duration: 2s;}
-    p2, p3, p4, p5, p6, p7, p8, p9 { color: red; animation-duration: 4s; }
+    p2 { color: yelow; animation-duration: 4s; }
  
     .container {
         position:center;
@@ -76,20 +77,23 @@
         padding-right: 20px;
     }
 
-    p2:hover{color:aliceblue}
 </style>
 <html>
 <body>
-    <div><p1>Microprocessors</p1></div>
-    <div>
-        <a href="renesas.html"><p2>- Renesas</p2></a>
+    <div class="container">
+        <p1>RENESAS MICRO<br><br><br></p1>
+        <div class="text-block"><p2><br>
+            Utilising Renesas M16C Processors to control oven temperature and graphical user displays.<br>                                                   
+            The main controller was located in the oven core and performed PID control of the oven<br>
+            temperature based on the cooking function selected by the user.<br>   
+            <br>
+            A smaller slave M16C processor was used to drive a separate LCD display unit using DMA<br>
+            and a Micrium graphics library to feed user functions and preferences to the main unit via<br>
+            USART comms.<br>
+            <br>I implemented a bare-metal scheduler to facilitate the software system.<br>
+            <br>
+            The IDE used was HEW and KD30 and E8 on-chip debugger.</p2>
+        </div>
     </div>
-    <div><a href="atmel.html"><p2>- Atmel</p2></a>
-    <div><p4>- Coldfire</p4></div>
-    <div><p5>- NXP</p5></div>
-    <div><p6>- Motorola</p6></div>
-    <div><p7>- Texas Instruments</p7></div>
-    <div><p8>- SPARC</p8></div>
-    <div><p9>- ST Micro</p9></div>
-</body>
+ </body>
 </html>

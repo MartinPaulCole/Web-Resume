@@ -61,6 +61,7 @@
             margin-left: 10%;
         }
     }
+
     @keyframes fadeInparagraph3 {
         from {
             opacity: 0;
@@ -107,8 +108,8 @@
         box-shadow: revert;
     }
 
-    p1 { font-size: 256px; margin-left: 75%; color: lawngreen; animation: fadeInTitle1; animation-duration: 2s;}
-    p2 { font-size: 128px; margin-left: 75%; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
+    p1 { font-size: 200px; margin-left: 75%; color: lawngreen; animation: fadeInTitle1; animation-duration: 2s;}
+    p2 { font-size: 96px; margin-left: 75%; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
     p3 { font-size: 128px; margin-left: 10%; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
     p4 { font-size: 96px; animation: fadeInBrief; animation-duration: 4s; }
     p5 { font-size: 256px; margin-left: 10%; color: lawngreen; animation: fadeInTitle2; animation-duration: 2s;}
@@ -137,20 +138,20 @@
         padding-right: 20px;
     }
 
-    .button1 {
+    .button {
         font-family: 'Agency FB';
         font-size: 128px;
-        background-color:darkcyan;
+        background-color:none;
+        opacity: 0.5;
         color: black;
-        border: 0px
+        border: 2px
     }
 
-    .button1:hover {
+    .button:hover {
         background-color:darkolivegreen;
         color: black;
         border: 0px;
     }
-
 </style>
 
 <html>
@@ -158,10 +159,10 @@
     <div class="container">
         <div><p5>PERSONAL PROFILE<p5></div>
         <div class="text-block"><p4>
-            has comprised mainly of work within the telecommunications industry.<br>      
-            I am an Embedded Software Developer with over 25 years of experience. This<br> 
-            This includes Mobile Radio equipment for ten years and six years working<br>  
-            on SCADA radio products.<br>                                                   
+            I am an Embedded Software Developer with over 25 years of experience.<br> 
+            A large amount of my experience comprises of work within the telecommunications<br>
+            industry. This includes Mobile Radio equipment for ten years and six years<br>
+            working on SCADA radio products.<br>                                                   
             <br>
             I have also worked in the Consumer Products, Household Power Management,<br>   
             Automotive and, most recently, Fire Detection Systems.<br>                     
@@ -182,8 +183,8 @@
         </p4></div>
     </div>
     <img src="img/me-glastonbury.jpg" alt="Personal Details" padding-bottom="20px">
-    <p1><button class="button1"; style="font-size: 128px; height: 200px; width: 700px;
-                border-radius: 128px; " onclick=" window.open('doc/Martin-Cole.pdf'); return true;"><i>RESUME</i></button>
+    <p1><button class="button"; style="font-size: 128px; height: 200px; width: 700px;
+                border-radius: 128px; "onclick=" window.open('doc/Martin-Cole.pdf'); return true;"><i>RESUME</i></button>
     </p1>
     <div><p1>ADDRESS</p1></div>
     <div><p2>1/10 Downing Street</p2></div>
@@ -195,5 +196,7 @@
     <div><p2>UK: (0739) 216 7769</p2></div>
     <div><p1>EMAIL</p1></div>
     <div><p2>martin.p.cole@gmail.com</p2></div>
+    <div><p1>LINKEDIN</p1></div>
+    <div><p2>https://www.linkedin.com/in/martinpaulcole/</p2></div>
 </body>
 </html>
