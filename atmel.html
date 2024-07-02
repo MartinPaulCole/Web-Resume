@@ -10,13 +10,13 @@
         from {
             opacity: 0;
             color: white;
-            margin-left: 50%;
+            margin-left: 50vw;
         }
 
         to {
             opacity: 1;
             color: orangered;
-            margin-left: 10%;
+            margin-left: 2vw;
         }
     }
 
@@ -24,19 +24,19 @@
         from {
             opacity: 0;
             color: white;
-            margin-left: 80%;
+            margin-left: 80vw;
         }
 
         to {
             opacity: 1;
             color: yellow;
-            margin-left: 10%;
+            margin-left: 1vw
         }
     }
 
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/eastborne.jpg');
-        height: 10%;
+        height: 0%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -46,8 +46,8 @@
         animation-fill-mode: forwards;
     }
 
-    p1 { font-size: 256px; color: orangered; margin-left: 10%;  animation: fadeInTitle; animation-duration: 2s;}
-    p2 { font-size: 96px; color: yellow;  margin-left: 10%; animation: fadeInParagraph; animation-duration: 4s; }
+    p1 { font-size: 5vw; color: orangered; margin-left: 2vw;  animation: fadeInTitle; animation-duration: 2s;}
+    p2 { font-size: 2vw; color: yellow;  margin-left: 1vw; animation: fadeInParagraph; animation-duration: 4s; }
 
     .container {
         position:center;
@@ -55,23 +55,23 @@
 
     .text-block {
         position: absolute;
-        top: 25%;
-        margin-left: 10%;
+        top: 5vw;
+        margin-left: 2vw;
         background-color: none;
         color: white;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
     img {
         border: 0px solid;
-        border-radius: 256px;
-        padding: 5px;
-        width: 700px;
-        height: 700px;
+        border-radius: 10vw;
+        padding: 1vw;
+        width: 15vw;
+        height: 15vw;
         margin-top: 0%;
-        margin-left: 75%;
-        margin-right: 20px;
+        margin-left: 75vw;
+        margin-right: 5vw;
     }
 </style>
 <html>
@@ -81,12 +81,12 @@
             <p1>ATMEL MICRO<br><br><br></p1>
             <p2><br>
             Utilising Atmel AVR micorprocessors to communicate between an ARM M4 processor<br>                                                   
-            and the main proprietary communications link connected main a fire alarm panel.<br>
-            temperature based on the cooking function selected by the user.<br>   
+            and the proprietary communications link connected to the main fire alarm panel.<br>
             <br>
-            The IDE used was AVR/Atmel/Microchip Studio, MPLABS and Flash Magic.</p2>
+            The ARM M4 controls a fire extinguishing panel and its conencted sensors and <br>
+            actuators. This information is then relayed to to the main panel via the ATMEL device.
         </div>
     </div>
-    <img src="img/microprocessor.jpg" alt="Microprocessor" padding-bottom="20px">
+    <img src="img/microprocessor.jpg" alt="Microprocessor" padding-bottom="5vw">
 </body>
 </html>

@@ -36,31 +36,64 @@
 
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/taipei-tower-distance.jpg');
-        height: 10%;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
         position: relative;
         animation: fadeInAnimation ease 3s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
 
-    p1 { font-size: 256px; color: blue; margin-left: 10%; animation: fadeInTitle; animation-duration: 2s;}
-    p2 { font-size: 96px; color: cyan; margin-left: 10%; animation: fadeInParagrah; animation-duration: 4s; }
+    @media (max-width: 399px) {
+        div
+        {
+            text-align: left; text-justify:auto; width: 360px; word-wrap: break-word;
+        }
+    }
+    
+    @media (min-width: 400px) {
+        p1 { font-size: 256px; color: blue; margin-left: 10%; animation: fadeInTitle; animation-duration: 2s;}
+    }
+
+    @media (max-width: 399px) {
+        p1 { font-size: 32px; color: blue; margin-left: 10%; animation: fadeInTitle; animation-duration: 2s;}
+    }
+
+    @media (min-width: 400px) {
+        p2 { font-size: 96px; color: cyan; margin-left: 10%; animation: fadeInParagrah; animation-duration: 4s; }
+    }
+
+    @media (max-width: 399px) {
+        p2 { font-size: 16px; color: white; margin-left: 10%; animation: fadeInParagrah; animation-duration: 4s; }
+    }
  
     .container {
         position:center;
     }
 
-    .text-block {
-        position: absolute;
-        top: 25%;
-        margin-left: 10%;
-        background-color: none;
-        color: white;
-        padding-left: 20px;
-        padding-right: 20px;
+    @media (min-width: 400px) {
+        .text-block {
+            position: absolute;
+            top: 25%;
+            margin-left: 10%;
+            background-color: none;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .text-block-a {
+            position: absolute;
+            top: 50%;
+            margin-left: 0%;
+            background-color: none;
+            color: white;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
 
     img {
@@ -73,24 +106,38 @@
         margin-left: 75%;
         margin-right: 20px;
     }
-</style>
+
+    .picture {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        width: 10%;
+    }
+
+ </style>
 <html>
 <body>
-    <div class="container">
-        <div class="text-block"><p2><br>
-            <p1>RENESAS MICRO<br><br><br></p1>
-            Utilising Renesas M16C Processors to control oven temperature and graphical user displays.<br>                                                   
-            The main controller was located in the oven core and performed PID control of the oven<br>
-            temperature based on the cooking function selected by the user.<br>   
-            <br>
-            A smaller slave M16C processor was used to drive a separate LCD display unit using DMA<br>
-            and a Micrium graphics library to feed user functions and preferences to the main unit via<br>
-            USART comms.<br>
-            <br>I implemented a bare-metal scheduler to facilitate the software system.<br>
-            <br>
-            The IDE used was HEW and KD30 and E8 on-chip debugger.</p2>
+     <div class="container">
+        <div class="text-block-a"><br>
+            <img src="img/circuit.jpg" alt="Microprocessor" padding-bottom="20px">
+            <div>
+                <p1>RENESAS MICRO<hr></p1>
+                <p2>
+                    <br>
+                    Utilising Renesas M16C Processors to control oven temperature and graphical user displays.                                           
+                    The main controller was located in the oven core and performed PID control of the oven
+                    temperature based on the cooking function selected by the user. 
+                    
+                    A smaller slave M16C processor was used to drive a separate LCD display unit using DMA
+                    and a Micrium graphics library to feed user functions and preferences to the main unit via
+                    USART comms.
+
+                    I implemented a bare-metal scheduler to facilitate the software system.
+                    
+                    The IDE used was HEW and KD30 and E8 on-chip debugger.
+                </p2>`
+            </div>
         </div>
     </div>
-    <img src="img/circuit.jpg" alt="Microprocessor" padding-bottom="20px">
- </body>
+  </body>
 </html>
