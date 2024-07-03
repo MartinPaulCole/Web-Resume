@@ -9,13 +9,13 @@
         from {
             opacity: 0;
             color: red;
-            margin-left: 100%;
+            margin-left: 100vw;
         }
 
         to {
             opacity: 1;
             color: yellow;
-            margin-left: 75%;
+            margin-left: 65vw;
         }
     }
 
@@ -29,7 +29,7 @@
         to {
             opacity: 1;
             color: yellow;
-            margin-left: 10%;
+            margin-left: 20vw;
         }
     }
 
@@ -37,13 +37,13 @@
         from {
             opacity: 0;
             color: red;
-            margin-left: 100%;
+            margin-left: 100vw;
         }
 
         to {
             opacity: 1;
             color: red;
-            margin-left: 75%;
+            margin-left: 65vw;
         }
     }
 
@@ -51,13 +51,13 @@
         from {
             opacity: 0;
             color: red;
-            margin-left: 0%;
+            margin-left: 0vw;
         }
 
         to {
             opacity: 1;
             color: red;
-            margin-left: 10%;
+            margin-left: 10vw;
         }
     }
 
@@ -65,13 +65,13 @@
         from {
             opacity: 0;
             color: red;
-            margin-left: 0%;
+            margin-left: 0vw;
         }
 
         to {
             opacity: 1;
             color: white;
-            margin-left: 10%;
+            margin-left: 10vw;
         }
     }
 
@@ -87,63 +87,67 @@
         }
     }
 
-    body {
-        background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/waterfall.jpg');
-        height: 10%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+    @media (min-width: 400px) {
+        body {
+            background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/waterfall.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
     }
 
-    p1, p2 {
-        font-family: 'Agency FB';
-        font-size: 128px;
-        text-align: center;
-        color: lawngreen;
-        background: border-box;
-        box-shadow: revert;
+    @media (max-width: 399px) {
+        body {
+            background-color: green;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
     }
-
-    p1 { font-size: 200px; margin-left: 75%; color: lawngreen; animation: fadeInTitle1; animation-duration: 2s;}
-    p2 { font-size: 96px; margin-left: 75%; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
-    p3 { font-size: 128px; margin-left: 10%; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
-    p4 { font-size: 96px; animation: fadeInBrief; animation-duration: 4s; }
-    p5 { font-size: 256px; margin-left: 10%; color: lawngreen; animation: fadeInTitle2; animation-duration: 2s;}
 
     img {
-        border: 0px solid;
-        border-radius: 256px;
-        padding: 5px;
-        width: 700px;
-        margin-top: 0%;
-        margin-left: 75%;
-        margin-right: 20px;
+        border: 0vw solid;
+        border-radius: 3vw;
+        padding: 5vw;
+        width: 10vw;
+        margin-top: 0vw;
+        margin-left: 75vw;
     }
-
+   
     .container {
         position:center;
     }
 
-    .text-block {
-        position: absolute;
-        top: 10%;
-        margin-left: 10%;
-        background-color: none;
-        color: white;
-        padding-left: 20px;
-        padding-right: 20px;
+    @media (min-width: 400px) {
+        .text-block {
+            position: absolute;
+            margin-top: 0vw;
+            margin-left: 10vw;
+            background-color: none;
+            color: white;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .text-block {
+            position: absolute;
+            top: 0vw;
+            margin-top: 0vw;
+            margin-left: 0vw;
+            background-color: none;
+            color: white;
+        }
     }
 
     .button {
         font-family: 'Agency FB';
-        font-size: 128px;
+        font-size: 2vw;
         background-color:none;
         opacity: 0.5;
         color: black;
-        border: 2px
+        border: 1vw;
     }
 
     .button:hover {
@@ -151,14 +155,41 @@
         color: black;
         border: 0px;
     }
+
+    @media (min-width: 400px) {
+        p1, p2 {
+            font-family: 'Agency FB';
+            font-size: 3vw;
+            text-align: center;
+            color: lawngreen;
+            background: border-box;
+            box-shadow: revert;
+        }
+    }
+
+    @media (min-width: 400px) {
+        p1 { font-size: 3vw; margin-left: 65vw; margin-top: 0vw; color: lawngreen; animation: fadeInTitle1; animation-duration: 2s; }
+        p2 { font-size: 2vw; margin-left: 65vw; margin-top: 0vw; color: red; animation: fadeInparagraph1; animation-duration: 4s; }
+        p3 { font-size: 2vw; margin-left: 10vw; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
+        p4 { font-size: 1vw; margin-left: 20vw; color: white; animation: fadeInBrief; animation-duration: 4s; }
+        p5 { font-size: 4vw; margin-left: 20vw; color: yellow; animation: fadeInTitle2; animation-duration: 2s; }
+    }
+
+    @media (max-width: 399px) {
+        p1 { font-size: 3w; margin-right: 0vw; color: lawngreen; }
+        p2 { font-size: 2vw; margin-right: 0vw; color: red; }
+        p3 { font-size: 2vw; margin-left: 0vw; color: red; }
+        p4 { font-size: 1vw; margin-left: 0vw; color: white; }
+        p5 { font-size: 4vw; margin-left: 0vw; color: yellow; }
+    }
 </style>
 
 <html>
 <body>
     <div class="container">
-        <div><p5>PERSONAL PROFILE<p5></div>
+        <div><p5>PERSONAL PROFILE<hr><p5></div>
         <div class="text-block"><p4>
-            I am an Embedded Software Developer with over 25 years of experience.<br> 
+            <br>I am an Embedded Software Developer with over 25 years of experience.<br> 
             A large amount of my experience comprises of work within the telecommunications<br>
             industry. This includes Mobile Radio equipment for ten years and six years<br>
             working on SCADA radio products.<br>                                                   
@@ -181,9 +212,8 @@
             as my own proprietary scheduler designs.<br>                               
         </p4></div>
     </div>
-    <img src="img/me-glastonbury.jpg" alt="Personal Details" padding-bottom="20px">
-    <p1><button class="button"; style="font-size: 128px; height: 200px; width: 700px;
-                border-radius: 128px; "onclick=" window.open('doc/Martin-Cole.pdf'); return true;"><i>RESUME</i></button>
+    <p1><button class="button"; style="font-size: 2vw; height: 3vw; width: 10vw;
+                border-radius: 3vw; "onclick=" window.open('doc/Martin-Cole.pdf'); return true;"><i>RESUME</i></button>
     </p1>
     <div><p1>ADDRESS</p1></div>
     <div><p2>1/10 Downing Street</p2></div>
