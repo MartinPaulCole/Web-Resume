@@ -8,7 +8,7 @@
 <style>
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/Crofton-Sunset.jpg');
-        width:100%; 
+        width:100vw; 
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
@@ -45,12 +45,17 @@
     @media screen and (max-width: 399px)
     {
         img {
-            border: 0vw solid;
-            border-radius: 0vw;
-            padding: 0vw;
             width: 100vw;
-            margin-left: 0vw;
-            margin-right: 0vw;
+        }
+    }
+
+    @media screen and (min-width: 400px)
+    {
+        .portrait {
+            position: absolute;
+            width: 10vw;
+            top: 0vw;
+            left: 0vw;
         }
     }
 
@@ -82,39 +87,11 @@
 
     @media screen and (min-width: 400px)
     {
-        img {
-            border: 0vw solid;
-            border-radius: 2vw;
-            padding: 1vw;
-            width: 16vw;
-            margin-left: 2vw;
-            margin-right: 2vw;
-        }
-    }
-
-    @media screen and (max-width: 399px)
-    {
-        img {
-            width: 100vw;
-        }
-    }
-
-    @media screen and (min-width: 400px)
-    {
-        .portrait {
-            position: absolute;
-            width: 10vw;
-            top: 0vw;
-            left: 0vw;
-        }
-    }
-
-    @media screen and (min-width: 400px)
-    {
         hr {
             visibility:hidden
         }
     }
+
     @media screen and (min-width: 400px)
     {
         p1 {
@@ -194,10 +171,10 @@
         p2,p3,p4 {
             font-family: 'Agency FB';
             font-size: 8vw;
-            color:white;
+            color:wheat;
         }
 
-        p5,p6,p7{visibility: hidden;}
+        p5,p6,p7 {visibility: hidden;}
     }
 
     @keyframes fadeInTitle {
@@ -260,7 +237,7 @@
 <html>
 <body>
     <div><p2>INTRODUCING</p2><div><p3>MARTIN COLE</p3></div>
-         <p4>Embedded Software Engineer (BE ELect)</p4></div>
+         <p4>Embedded Software Engineer (BE ELect)</p4><hr></div>
     <div class="portrait">
         <div>
             <a href="portrait.html"><img src="img/me-glastonbury.jpg" alt="Personal Details"></a>
@@ -276,26 +253,31 @@
             <div>
                 <hr>
                 <p1>Microprocessors</p1>
+                <hr>
                 <a href="circuit.html"><img src="img/circuit.jpg" alt="Microprocessors"></a>
             </div>
             <div>
                 <hr>
                 <p1>Industries</p1>
+                <hr>
                 <a href="industry.html"><img src="img/industry.jpg" alt="Industries"></a>
             </div>
             <div>
                 <hr>
                 <p1>Technologies</p1>
+                <hr>
                 <a href="code.html"><img src="img/code2.jpg" alt="Technologies"></a>
             </div>
             <div>
                 <hr>
                 <p1>Products</p1>
+                <hr>
                 <a href="factory.html"><img src="img/factory.jpg" alt="Products"></a>
             </div>
             <div>
                 <hr>
                 <p1>Projects</p1>
+                <hr>
                 <a href="projects.html"><img src="img/projects.jpg" alt="Products"></a>
             </div>
         </div>
