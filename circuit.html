@@ -16,7 +16,7 @@
         to {
             opacity: 1;
             color: bisque;
-            margin-left: 25%;
+            margin-left: 35%;
         }
     }
 
@@ -34,16 +34,26 @@
         }
     }
 
-    body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
-        height: 10%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        animation: fadeInAnimation ease 3s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+    @media (min-width: 400px) {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    }
+
+    @media (max-width: 399px) {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('img/memory-chip.png');
+            background-color:blue;
+            background-position: center;
+            background-position-y: 12vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
     }
 
     p1, p2 {
@@ -54,21 +64,26 @@
         position: center;
     }
 
-    p1 { font-family: 'Agency FB'; font-size: 512px; color: bisque; margin-left:25%;  animation: fadeInTitle; animation-duration: 2s;}
-    p2 { font-family: 'Agency FB'; font-size: 256px; color: cyan; margin-left: 50%;  animation: fadeInParagraph; animation-duration: 4s;}
+    @media (min-width: 400px) {
+        p1 { font-family: 'Agency FB'; font-size: 5vw; color: bisque; margin-left:35vw;  animation: fadeInTitle; animation-duration: 2s;}
+        p2 { font-family: 'Agency FB'; font-size: 2vw; color: cyan; margin-left: 50vw;  animation: fadeInParagraph; animation-duration: 4s;}
+    }
  
+    @media (max-width: 399px) {
+        p1 { font-family: 'Agency FB'; font-size: 15vw; color: cyan; margin-left:0vw; }
+        p2 { font-family: 'Agency FB'; font-size: 10vw; color: white; margin-left: 0vw;}
+    }
+
     .container {
         position:center;
     }
 
     .text-block {
         position: absolute;
-        top: 25%;
-        margin-left: 10%;
+        top: 25vw;
+        margin-left: 10vw;
         background-color: none;
         color: white;
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
     p2:hover{color:aliceblue}
@@ -86,7 +101,7 @@
 </style>
 <html>
 <body>
-    <div><p1>Microprocessors</p1></div>
+    <div><p1><b>Microprocessors</b></p1><hr></div>
     <div>
         <a href="renesas.html"><p2>- Renesas</p2></a>
     </div>
@@ -98,7 +113,7 @@
     <div><p2>- Motorola</p2></div>
     <div><p2>- Texas Instruments</p2></div>
     <div><p2>- SPARC</p2></div>
-    <div><p2>- ST Micro</p2></div>
+    <div><p2>- ST Micro</p2><hr></div>
     
 </body>
 </html>
