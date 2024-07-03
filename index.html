@@ -60,15 +60,6 @@
 
     @media screen and (min-width: 400px)
     {
-        .portrait {
-            position: absolute;
-            top: 0vw;
-            left: 0vw;
-        }
-    }
-
-    @media screen and (min-width: 400px)
-    {
         .grid-container {
             display: grid;
             grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
@@ -110,6 +101,22 @@
 
     @media screen and (min-width: 400px)
     {
+        .portrait {
+            position: absolute;
+            width: 10vw;
+            top: 0vw;
+            left: 0vw;
+        }
+    }
+
+    @media screen and (min-width: 400px)
+    {
+        hr {
+            visibility:hidden
+        }
+    }
+    @media screen and (min-width: 400px)
+    {
         p1 {
             font-family: 'Agency FB';
             font-size: 2vw;
@@ -149,29 +156,25 @@
             animation-duration: 3s;
         }
 
-        p5 {
+        p5,p6,p7{
             font-family: 'Book Antiqua';
             font-size: 3vw;
-            animation: fadeInSkills1;
             color: white;
+        }
+        p5 {
+            animation: fadeInSkills1;
             animation-duration: 3s;
             margin-left: 65vw;
         }
 
         p6 {
-            font-family: 'Book Antiqua';
-            font-size: 3vw;
             animation: fadeInSkills2;
-            color: white;
             animation-duration: 4s;
             margin-left: 55vw;
         }
 
         p7 {
-            font-family: 'Book Antiqua';
-            font-size: 3vw;
             animation: fadeInSkills3;
-            color: white;
             animation-duration: 5s;
             margin-left: 45vw;
         }
@@ -188,22 +191,10 @@
             background: border-box;
         }
 
-        p2 {
+        p2,p3,p4 {
             font-family: 'Agency FB';
             font-size: 8vw;
             color:white;
-        }
-
-        p3 {
-            font-family: 'Agency FB';
-            font-size:8vw;
-            color: white;
-        }
-
-        p4 {
-            font-family: 'Agency FB';
-            font-size: 10vw;
-            color: wheat;
         }
 
         p5,p6,p7{visibility: hidden;}
@@ -274,7 +265,6 @@
         <div>
             <a href="portrait.html"><img src="img/me-glastonbury.jpg" alt="Personal Details"></a>
         </div>
-        <p1>Personal Details</p1>
     </div>
     <p5><i>Colaboration</i></p5>
     <p6><i>Innovation</i></p6>
@@ -284,24 +274,29 @@
     <div>
         <div class="grid-container">
             <div>
-                <a href="circuit.html"><img src="img/circuit.jpg" alt="Microprocessors"></a>
+                <hr>
                 <p1>Microprocessors</p1>
+                <a href="circuit.html"><img src="img/circuit.jpg" alt="Microprocessors"></a>
             </div>
             <div>
-                <a href="industry.html"><img src="img/industry.jpg" alt="Industries"></a>
+                <hr>
                 <p1>Industries</p1>
+                <a href="industry.html"><img src="img/industry.jpg" alt="Industries"></a>
             </div>
             <div>
-                <a href="code.html"><img src="img/code2.jpg" alt="Technologies"></a>
+                <hr>
                 <p1>Technologies</p1>
+                <a href="code.html"><img src="img/code2.jpg" alt="Technologies"></a>
             </div>
             <div>
-                <a href="factory.html"><img src="img/factory.jpg" alt="Products"></a>
+                <hr>
                 <p1>Products</p1>
+                <a href="factory.html"><img src="img/factory.jpg" alt="Products"></a>
             </div>
             <div>
-                <a href="projects.html"><img src="img/projects.jpg" alt="Products"></a>
+                <hr>
                 <p1>Projects</p1>
+                <a href="projects.html"><img src="img/projects.jpg" alt="Products"></a>
             </div>
         </div>
     </div>
