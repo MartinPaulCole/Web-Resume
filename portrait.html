@@ -125,6 +125,7 @@
 
     @media (min-width: 400px) {
         .text-block1 {
+            font-family: 'Agency FB';
             font-size: 1.5vw;
             position: absolute;
             margin-top: 0vw;
@@ -136,6 +137,7 @@
  
     @media (max-width: 399px) {
         .text-block1 {
+            font-family: 'Agency FB';
             font-size: 3vw;
             position: absolute;
             top: 0vw;
@@ -148,6 +150,7 @@
 
     @media (min-width: 400px) {
         .text-block2 {
+            font-family: 'Agency FB';
             font-size: 1.5vw;
             position: absolute;
             margin-top: 0vw;
@@ -159,6 +162,7 @@
 
     @media (max-width: 399px) {
         .text-block2 {
+            font-family: 'Agency FB';
             font-size: 2vw;
             position: absolute;
             margin-top: 100vw;
@@ -170,7 +174,7 @@
 
     @media (max-width: 399px) {
         .button {
-            visibility:collapse;
+            visibility: collapse;
         }
     }
 
@@ -204,27 +208,19 @@
     }
 
     @media (min-width: 400px) {
-        p1 { font-size: 3vw; color: lawngreen;}
-        p2 { font-size: 2vw; color: red;}
-        p3 { font-size: 2vw; margin-left: 10vw; color: red; animation: fadeInparagraph2; animation-duration: 4s; }
-        p4 { font-size: 2vw; margin-left: 5vw; color: white; animation: fadeInBrief; animation-duration: 4s; }
-        p5 { font-size: 4vw; margin-left: 5vw; color: yellow; animation: fadeInTitle2; animation-duration: 2s; }
+        p1 { font-size: 4vw; margin-left: 5vw; color: yellow; animation: fadeInTitle2; animation-duration: 2s; }
     }
 
     @media (max-width: 399px) {
-        p1 { font-size: 3w; margin-right: 0vw; color: lawngreen; }
-        p2 { font-size: 4vw; margin-right: 0vw; color: red; }
-        p3 { font-size: 4vw; margin-left: 0vw; color: red; }
-        p4 { font-size: 4vw; margin-left: 0vw; margin-top: 10vw; color: white; }
-        p5 { font-size: 8vw; margin-left: 0vw; color: yellow; }
+        p1 { font-size: 8vw; margin-left: 0vw; color: yellow; }
     }
 </style>
 
 <html>
 <body>
     <div class="container">
-        <div><p5>PERSONAL PROFILE<hr><p5></div>
-        <div class="text-block1"><b>
+        <div><p1><b>PERSONAL PROFILE<hr></b><p1></div>
+        <div class="text-block1">
             I am an Embedded Software Developer with over 25 years of experience.<br> 
             A large amount of my experience comprises of work within the telecommunications<br>
             industry. This includes Mobile Radio equipment for ten years and six years<br>
@@ -246,7 +242,7 @@
             The operating systems I have used range in size from proprietary NEC<br> 
             Exchange OS down to a small ECos, Micrium MicroC-OS, Bare Metal as well<br>
             as my own proprietary scheduler designs.<br>                               
-        </b></div>
+        </div>
     </div>
     <div class="container">
         <div class="text-block2">
@@ -261,7 +257,7 @@
             martin.p.cole@gmail.com<br>
             <hr><b>LINKEDIN</b><hr>
             https://www.linkedin.com/in/martinpaulcole/<hr><br>
-            <button class="button"; "onclick=" window.open('doc/Martin-Cole.pdf'); return true;"><i>RESUME</i></button>
+            <button class="button"; "onclick=" window.open('doc/Martin-Cole.pdf'); return true;">RESUME</button>
         </b></div>
     </div>
 </body>
