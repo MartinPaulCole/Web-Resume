@@ -93,7 +93,7 @@
         body {
             background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/thames-1.jpg');
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: 1;
             background-size: cover;
             position: relative;
         }
@@ -104,21 +104,12 @@
             background-image: linear-gradient(rgba(0.7, 0.7, 0.7, 0.7), rgba(0.7, 0.7, 0.7, 0.7)), url('img/moon.jpg');
             background-color: rgb(88, 66, 131);
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: 1;
             background-size: cover;
             position: relative;
         }
     }
 
-    img {
-        border: 0vw solid;
-        border-radius: 3vw;
-        padding: 5vw;
-        width: 10vw;
-        margin-top: 0vw;
-        margin-left: 75vw;
-    }
-   
     .container {
         position:center;
     }
@@ -213,12 +204,38 @@
     @media (max-width: 399px) {
         p1 { font-family: 'Agency FB'; font-size: 8vw; margin-left: 0vw; color: yellow; }
     }
+
+    img {
+         width: 10vw;
+    }
+
+    @media screen and (min-width: 400px)
+    {
+        .portrait {
+            position: absolute;
+            width: 10vw;
+            top: 0vw;
+            left:100vw;
+        }
+    }
+
+    /* unvisited link */
+    a:link { color: yellow; }
+
+    /* visited link */
+    a:visited { color: white; }
+
+    /* mouse over link */
+    a:hover { color: green; opacity: 0.5}
+
+    /* selected link */
+    a:active { color: yellow; border: 4px solid; }
+
 </style>
 
 <html>
-<body>
     <div class="container">
-        <div><p1>PERSONAL PROFILE</b><p1></div>
+        <div><p1>PERSONAL PROFILE</b></p1></div>
         <div class="text-block1">
             I am an Embedded Software Developer with over 25 years of experience.<br> 
             A large amount of my experience comprises of work within the telecommunications<br>
@@ -243,8 +260,12 @@
             as my own proprietary scheduler designs.<br>                               
         </div>
     </div>
-    <div></div> class="container">
+    <div class="container">
         <div class="text-block2">
+            <div class = "portrait">
+                <a href="resume.html"><img src="img/book.png" alt="Personal Details"></a>
+                <p1>RESUME</p1>
+            </div>
             <br><hr><b>ADDRESS</b><hr>
             1/10 Downing Street, Crofton Downs,
             Wellington 6035<br>
@@ -256,8 +277,7 @@
             martin.p.cole@gmail.com<br>
             <hr><b>LINKEDIN</b><hr>
             https://www.linkedin.com/in/martinpaulcole/<hr><br>
-            <button class="button" onclick="location.href='doc/Martin-Cole.pdf'>RESUME</button>
-       </div>
+        </div>
     </div>
 </body>
 </html>
