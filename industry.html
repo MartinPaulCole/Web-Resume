@@ -24,7 +24,87 @@
     }
 </style>
 <html>
+</head>
+<style>
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            color: white;
+            margin-left: 50vw;
+        }
+
+        to {
+            opacity: 1;
+            color: white;
+            margin-left: 35vw;
+        }
+    }
+
+    @keyframes fadeInParagraph {
+        from {
+            opacity: 0;
+            color: white;
+            margin-left: 75vw;
+        }
+
+        to {
+            opacity: 1;
+            color: white;
+            margin-left: 50vw;
+        }
+    }
+
+    @media (min-width: 400px) {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/industry.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    }
+
+    @media (max-width: 399px) {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('img/factory.png');
+            background-color:grey;
+            background-position: center;
+            background-position-y: 8vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    }
+
+    @media (min-width: 400px) {
+        p1 { font-family: 'Agency FB'; font-size: 5vw; color: bisque; margin-left: 35vw;  animation: fadeInTitle; animation-duration: 2s;}
+        p2 { font-family: 'Agency FB'; font-size: 2vw; color: cyan; margin-left: 50vw;  animation: fadeInParagraph; animation-duration: 4s;}
+    }
+ 
+    @media (max-width: 399px) {
+        p1 { font-family: 'Agency FB'; font-size: 10vw; color: cyan; margin-left: 0vw; }
+        p2 { font-family: 'Agency FB'; font-size: 7vw; color: white; margin-left: 0vw;}
+    }
+
+    p2:hover{color:aliceblue}
+
+    .container {
+        position:center;
+    }
+
+</style>
+<html>
 <body>
-    <p1>Industries</p1>
+    <div><hr><p1>Industries</p1><hr></div>
+    <div>
+        <a href="telecomms.html"><p2>- Telecommunications</p2></a>
+    </div>
+    <div>
+        <a href="extinguishing.html"><p2>- Fire detection</p2></a>
+    </div>
+    <div><p2>- Consumer products</p2></div>
+    <div><p2>- Automotive</p2></div>
+    <div><p2>- Payments solutions</p2></div>
+    <div><p2>- Household AMR</p2></div>
 </body>
 </html>

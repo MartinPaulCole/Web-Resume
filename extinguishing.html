@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmel</title>
+</head>
+<style>
+    /* The animation code */
+    @keyframes fadeInTitle {
+        from {
+            opacity: 0;
+            color: white;
+            margin-left: 50vw;
+        }
+
+        to {
+            opacity: 1;
+            color: red;
+            margin-left: 0vw;
+        }
+    }
+
+    @keyframes fadeInparagraph {
+        from {
+            opacity: 0;
+            color: white;
+            margin-left: 80vw;
+        }
+
+        to {
+            opacity: 1;
+            color: yellow;
+            margin-left: 0vw
+        }
+    }
+
+    @media (min-width: 400px) {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/fire.jpg');
+            width:100vw; 
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: page;
+            object-fit: fill;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    @media (max-width: 399px) {
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/fire.jpg');
+            background-color: rgb(173, 44, 98);
+            background-size: cover;
+            object-fit: fill;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+    
+
+    @media (min-width: 400px) {
+        p1 { font-size: 5vw; color: red; margin-left: 0vw; margin-right: 25vw; animation: fadeInTitle; animation-duration: 2s; }
+        p2 { font-size: 2vw; color: white; margin-left: 0vw; margin-right: 25vw; animation: fadeInParagraph; animation-duration: 4s; }
+    }
+
+    @media (max-width: 399px) {
+        p1 { font-size: 10vw; color: red; margin-left: 0vw; margin-right: 0vw; }
+        p2 { font-size: 4vw; color: white; margin-left: 0vw; margin-right: 0vw; }
+    }
+
+    .container {
+        position:center;
+    }
+
+    @media (min-width: 400) {
+        .text-block {
+            position: absolute;
+            top: 0vw;
+            margin-left: 2vw;
+            margin-right: 25vw;
+         }
+    }
+
+    @media (max-width: 399) {
+        .text-block {
+            position: absolute;
+            top: 5vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
+         }
+    }
+
+    img {
+        border: 0px solid;
+        border-radius: 10vw;
+        width: 15vw;
+        height: 15vw;
+        margin-top: 0%;
+        margin-left: 80vw;
+    }
+
+    .portrait {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+    }
+
+</style>
+<html>
+<body>
+    <div class="container">
+        <img class = portrait src="img/fire-truck.jpg" alt="Fire detection" padding-bottom="5vw">
+        <div class="text-block">
+            <p1>FIRE EXTINGUISHING</p1>
+            <div>
+                <p2><br><hr>
+                Implemented ground-up redevlopment of a fire detection panel.<br>
+                <br></p2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
