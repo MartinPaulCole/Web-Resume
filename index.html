@@ -57,6 +57,14 @@
         }
     }
 
+    @media screen and (mX-width: 399vw)
+    {
+        .portrait {
+            position: absolute;
+            width: 50vw;
+        }
+    }
+
     img:hover {
         box-shadow: 0 0 1vw 1vw rgba(150, 0, 150, 0.5);
     }
@@ -106,36 +114,29 @@
             font-size: 3vw;
             margin-left: 20vw;
             color:white;
-            animation: fadeInTitle;
-            animation-duration: 3s;
         }
 
         p3 {
             font-family: 'Agency FB';
+            color: wheat;
             font-size: 3vw;
             margin-left: 20vw;
-            color: wheat;
-            animation: fadeInTitle;
-            animation-duration: 3s;
         }
 
         p4 {
             font-family: 'Agency FB';
+            color: wheat;
             font-size: 3vw;
             margin-left: 20vw;
         }
 
-        p2,p3,p4 {
-            color: wheat;
-            animation: fadeInTitle;
-            animation-duration: 3s;
-        }
-
-        p5,p6,p7{
+        /* Skills fade in */
+        p5, p6, p7{
             font-family: 'Book Antiqua';
             font-size: 3vw;
             color: white;
         }
+
         p5 {
             animation: fadeInSkills1;
             animation-duration: 3s;
