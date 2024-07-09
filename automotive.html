@@ -5,64 +5,21 @@
     <title>Atmel</title>
 </head>
 <style>
-    /* The animation code */
-    @keyframes fadeInTitle {
-        from {
-            opacity: 0;
-            color: white;
-            margin-left: 50vw;
-        }
-
-        to {
-            opacity: 1;
-            color: wheat;
-            margin-left: 0vw;
-        }
-    }
-
-    @keyframes fadeInparagraph {
-        from {
-            opacity: 0;
-            color: white;
-            margin-left: 80vw;
-        }
-
-        to {
-            opacity: 1;
-            color: yellow;
-            margin-left: 0vw
-        }
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bmw.jpg');
+        width:100vw; 
+        background-position: left;
+        background-repeat: 1;
+        background-size: cover;
+        position: page;
+        object-fit: fill;
+        min-width: 100%;
+        min-height: 100%;
     }
 
     @media (min-width: 400px) {
-        body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/bmw.jpg');
-            width:100vw; 
-            background-position: left;
-            background-repeat: 1;
-            background-size: cover;
-            position: page;
-            object-fit: fill;
-            min-width: 100%;
-            min-height: 100%;
-        }
-    }
-
-    @media (max-width: 399px) {
-        body{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/moon.jpg');
-            background-color: grey;
-            background-size: cover;
-            object-fit: fill;
-            min-width: 100%;
-            min-height: 100%;
-        }
-    }
-    
-
-    @media (min-width: 400px) {
-        p1 { font-size: 5vw; color: wheat; margin-left: 0vw; margin-right: 25vw; animation: fadeInTitle; animation-duration: 2s; }
-        p2 { font-size: 2vw; color: white; margin-left: 0vw; margin-right: 25vw; animation: fadeInParagraph; animation-duration: 4s; }
+        p1 { font-size: 5vw; color: wheat; margin-left: 0vw; margin-right: 25vw;}
+        p2 { font-size: 2vw; color: white; margin-left: 0vw; margin-right: 25vw;}
     }
 
     @media (max-width: 399px) {
