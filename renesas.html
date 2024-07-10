@@ -74,18 +74,19 @@
 <body>
      <div class="container">
         <img class = portrait src="img/circuit.jpg" alt="Renesas" padding-bottom="5vw">
-         <p1>Renesas Micro</p1><hr>
-         <div class="text-block">
+        <p1>Renesas Micro</p1>
+        <div class="text-block">
+            <hr>
             Utilising Renesas M16C Processors to control oven temperature and graphical user displays.                                         
             The main controller was located in the oven core and performed PID control of the oven
             temperature based on the cooking function selected by the user.
-            
+            <br><br>
             A smaller slave M16C processor was used to drive a separate LCD display unit using DMA
             and a Micrium graphics library to feed user functions and preferences to the main unit via
             USART comms.
-                
+            <br><br>    
             I implemented a bare-metal scheduler to facilitate the software system.
-            
+            <br><br>
             The IDE used was HEW and KD30 and E8 on-chip debugger.
         </div>
     </div>
