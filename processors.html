@@ -8,9 +8,9 @@
 
     @media (min-width: 400px) {
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/circuit.jpg');            
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: 2;
             background-size: cover;
             position: relative;
         }
@@ -18,24 +18,40 @@
 
     @media (max-width: 399px) {
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('img/memory-chip.png');
-            background-color:blue;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('img/circuit.png');
             background-position: center;
-            background-position-y: 8vw;
-            background-repeat: no-repeat;
+            background-repeat: 2;
             background-size: cover;
             position: relative;
         }
     }
 
+    @media screen and (min-width: 400px)
+    {
+        .portrait {
+            width: 4vw;
+            margin-left: 10vw;
+            background-color: aqua;
+        }
+    }
+
+    @media screen and (max-width: 399px)
+    {
+        .portrait {
+            width: 8vw;
+            margin-left: 10vw;
+            background-color: aqua;
+        }
+    }
+
     @media (min-width: 400px) {
-        p1 { font-family: 'Agency FB'; font-size: 7vw; color: wheat; margin-left: 30vw;}
-        p2 { font-family: 'Agency FB'; font-size: 3vw; color: white; margin-left: 45vw;}
+        p1 { font-family: 'Agency FB'; font-size: 7vw; color: wheat; margin-left: 10vw;}
+        p2 { font-family: 'Agency FB'; font-size: 3vw; color: white; margin-left: 0vw;}
     }
  
     @media (max-width: 399px) {
         p1 { font-family: 'Agency FB'; font-size: 12vw; color: wheat; margin-left: 15vw; }
-        p2 { font-family: 'Agency FB'; font-size: 8vw; color: white; margin-left: 25vw;}
+        p2 { font-family: 'Agency FB'; font-size: 8vw; color: white; margin-left: 0vw;}
     }
 
     p2:hover{opacity:0.5;}
@@ -43,20 +59,37 @@
 
 <html>
 <body>
-    <div><hr><p1>Microprocessors</p1>
-    <img src="img/memory-chip.png" alt="Renesas" padding-bottom="5vw"><hr></div>
     <div>
+        <p1>Microprocessors</p1>
+    <div>
+        <hr>
+        <img class="portrait" src="img/memory-chip.png" alt="Microchip">
         <a href="renesas.html"><p2>- Renesas</p2></a>
     </div>
     <div>
-        <a href="atmel.html"><br><p2>- Atmel</p2></a>
+        <img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <a href="atmel.html"><p2>- Atmel</p2></a>
     </div>
-    <div><br><p2>- Coldfire</p2></div>
-    <div><br><p2>- NXP</p2></div>
-    <div><br><p2>- Motorola</p2></div>
-    <div><br><p2>- Texas Instruments</p2></div>
-    <div><br><p2>- SPARC</p2></div>
-    <div><br><p2>- ST Micro</p2><hr></div>
-    
+    <div>
+        <img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- Coldfire</p2>
+    </div>
+    <div>
+        <img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- NXP</p2>
+    </div>
+    <div>
+        <img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- Motorola</p2>
+    </div>
+    <div><img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- Texas Instruments</p2>
+    </div>
+    <div><img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- SPARC</p2>
+    </div>
+    <div><img class="portrait" src="img/memory-chip.png" alt="Microchip">
+        <p2>- ST Micro</p2>
+    </div>
 </body>
 </html>
