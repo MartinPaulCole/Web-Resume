@@ -31,8 +31,8 @@
     @media (max-width: 399px) {
         .text-block1 {
             font-family: 'Agency FB';
-            font-size: 2.5vw;
-            width: 95vw;
+            font-size: 3vw;
+            width: 90vw;
             text-align: justify;
             position: absolute;
             color: white;
@@ -55,12 +55,12 @@
     @media (max-width: 399px) {
         .text-block2 {
             font-family: 'Agency FB';
-            font-size: 2vw;
+            font-size: 3vw;
             width: 60vw;
             text-align: justify;
             border: 1px solid white;  
             position: absolute;
-            margin-top: 50vw;
+            margin-top: 80vw;
             color: white;
         }
     }
@@ -70,11 +70,21 @@
     }
 
     @media (max-width: 399px) {
-        p1 { font-family: 'Agency FB'; font-size: 10vw;  color: wheat; margin-left: 2vw; margin-right: 2vw;}
+        p1 { font-family: 'Agency FB'; font-size: 10vw;  color: wheat; margin-left: 3vw; margin-right: 2vw;}
     }
- m
-    img {
-         width: 10vw;
+
+    @media screen and (min-width: 400px)
+    {
+        .portrait {
+            width: 6vw;
+        }
+    }
+
+    @media screen and (max-width: 399px)
+    {
+        .portrait {
+            width: 8vw;
+        }
     }
 
     a:hover { opacity: 0.5}
@@ -89,23 +99,23 @@
             experience. A large amount of my experience comprises of
             work within the telecommunications industry. This includes
             Mobile Radio equipment for ten years and six years working
-            on SCADA radio products.                                                   
+            on SCADA radio products.<br><br>                                                   
             
             I have also worked in the Consumer Products, Household Power
             Management, Automotive and, most recently, Fire Detection
-            Systems.                     
+            Systems.<br><br>                     
             
             I enjoy working in all stages of software development and
-            have used many platforms (both large and small).                                          
+            have used many platforms (both large and small).<br><br>
             
             I have experience in C and assembly language equally. I have
             worked on a range of processors and Operating Systems. 
             These processors include NXP, Renesas, Motorola HC11, Atmel,
-            ST and TI DSPs.                            
+            ST and TI DSPs.<br><br>
             
             I am comfortable working on driver layer software as well as
             the core level and application layers within the embedded
-            domain.                     
+            domain.<br><br>
             
             The operating systems I have used range in size from 
             proprietary NEC Exchange OS down to a small ECos, Micrium,
@@ -115,11 +125,12 @@
     </div>
     <div class="text-block2">
         <div>
-            <p1>RESUME</p1><br>
-            <a href="resume.html"><img src="img/book.png" alt="Personal Details"></a>
+            <p1>RESUME  </p1>
+            <a href="resume.html"><img class="portrait" src="img/book.png" alt="Resume"></a>
+            <hr>
         </div>
-        <p1><hr>CONTACT</p1><br>
-        <b>ADDRESS</b><br>
+        <p1>CONTACT</p1><br>
+        <b>ADDRESS</b>
         1/10 Downing Street, Crofton Downs<br>
         Wellington 6035<br>
         New Zealand<br><br>
@@ -129,7 +140,7 @@
         <b>EMAIL</b><br>
         martin.p.cole@gmail.com<br><br>
         <b>LINKEDIN</b><br>
-        https://www.linkedin.com/in/martinpaulcole/<br><br>
+        https://www.linkedin.com/in/martinpaulcole/<br>
     </div>
  </body>
 </html>
