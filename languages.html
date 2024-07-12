@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembler</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/kapiti-reflection.jpg');
+        background-repeat: 1;
+        background-size: cover;
+        min-width: 100vw;
+        min-height: 100vw;
+    }
+
+    @media (min-width: 400px) {
+        p1 { font-size: 4vw; color: wheat; margin-left: 2vw; margin-right: 25vw;}
+        p2 { font-size: 2vw; color: wheat;}
+        p3 { font-size: 1.5vw; color: greenyellow; margin-left: 2vw}
+    }
+
+    @media (max-width: 399px) {
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; margin-right: 0vw; }
+        p2 { font-size: 5vw; color: wheat;}
+        p3 { font-size: 4vw; color: greenyellow;}
+    }
+
+    .container {
+        position:center;
+    }
+
+    @media (min-width: 400px) {
+        .text-block {
+            font-size: 1.5vw; 
+            color: white;
+            position: absolute;
+            margin-left: 10vw;
+            margin-right: 25vw;
+            width: 70vw;
+            text-align: justify;
+         }
+    }
+
+    @media (max-width: 399px) {
+        .text-block {
+            font-size: 4vw; 
+            color: white;
+            position: absolute;
+            margin-left: 2vw;
+            margin-right: 2vw;
+            width: 90vw;
+            text-align: justify;
+         }
+    }
+
+    .portrait {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        top: 0vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 0vw;
+        margin-left: 80vw;
+    }
+
+    p2:hover{opacity:0.5;}
+
+</style>
+<html>
+<body>
+    <div class="container">
+        <img class = portrait src="img/multi-cell-tower.jpg" alt="Languages" padding-bottom="5vw">
+        <p1>Languages</p1>
+        <div class="text-block">
+            <div>
+                <hr><p2>Assembly Language<br></p2><hr>
+                My first experience of microprocessors and digital electronics was at university during my engineering degree.
+                My final year project involved working on an Intel 8048 processor.  <a href="https://en.wikipedia.org/wiki/Intel_MCS-48"><p3>(ref. Intel MCS-48)</p3></a>.
+                The development environment was Daisy DNIX  <a href="https://en.wikipedia.org/wiki/Daisy_Systems"><p3>(ref. Daisy DNIX)</p3></a>. This gave me an introduction
+                to modular design techniques and embedded software debugging.<br><br>
+
+                My next influential experience was when I began working with Telecom NZ. <a href="telecomms.html"><p3>(ref. Telecommmunications)</p3></a>
+                I worked for four years on a very large scale 32-bit assembly language NEAX-61E telephone exchange platform. The software was modular and highly complex. 
+                My role was to implement features now taken for granted such as CENTREX <a href="https://en.wikipedia.org/wiki/Centrex"><p3>(ref. CENTREX)</p3></a>, 
+                three-way calling, call waiting, call diversion, network handover tones. At this time competitors to Telecom were entering the market so we had to provide 
+                routing and billing features to cater for these. <a href="https://en.wikipedia.org/wiki/Clear_Communications"><p3>(ref. Clear Communcations Ltd)</p3></a><br><br>
+
+                We used a proprietary NEC operating system with task control, inter-task messaging, priority queuinmg and the concepts of context switching. Being a safety 
+                critical system meant strict adherence to the SDLC beginning with thoroughly reviewed and documented designs, implementations and unit tests. These went on 
+                to multiple forms of testing such as 'Soak', 'Stability', 'Integration' and finally 'Customer Acceptance'.<br><br>
+
+                I was to take this experience and apply it in my next role working for Tait Electronics on the motorola processors for their conventional and trunked
+                radios. <a href="https://en.wikipedia.org/wiki/Motorola_68HC11"><p3>(ref. Motorola 68HC11)</p3></a><br><br>
+                
+                <b>References:</b><br><br>
+                <a href="https://www.taitcommunications.com/about-us/our-history"><p3>- Tait Communications Ltd</p3></a><br>
+                <a href="https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System"><p3>- Conventional Mode CTCSS</p3></a><br>
+                <a href="https://en.wikipedia.org/wiki/Selcall"><p3>- Conventional Mode Selcall</p3></a><br>
+                <a href="https://en.wikipedia.org/wiki/MPT-1327"><p3>- MPT1327 Standard</p3></a><br>
+                <br><br>                
+                <br><br>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
