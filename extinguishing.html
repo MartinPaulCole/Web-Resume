@@ -53,29 +53,15 @@
          }
     }
 
-    img {
-        border: 0px solid;
-        border-radius: 10vw;
+    .portrait {
+        position: absolute;
         width: 15vw;
         height: 15vw;
-        margin-top: 0%;
+        top: 0vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 0vw;
         margin-left: 80vw;
-    }
-
-    @media (min-width: 400px) {
-        .portrait {
-            position: absolute;
-            width: 15vw;
-            height: 15vw;
-        }
-    }
-
-    @media (max-width: 399px) {
-        .portrait {
-            position: absolute;
-            width: 12vw;
-            height: 12vw;
-        }
     }
 
 </style>
@@ -97,17 +83,17 @@
                 to developing the software for a new ground up solution. This comprised of a basic UI and main ARM-M4 controller 
                 which communicated with various analogue sensors and actuators.
                 <br><br>
-                I architected a software system utilising my own designed bare-metal scheduler which communicated via
-                RS485, I2C and ADC to sensors and actuators for driving relays, switches, valves and sounders to enact
-                the extinguishing process.
-                <br><br>
-                A further ATMEL processor was employed to communicated to the main control panel which was already in production.
-                This used a proprietary protocol which was common to all other fire detection devices connected to a common loop. 
-                <br><br>
                 Adhering to British, European and German national standards, consideration was made for MISRA and SIL2 level
-                software quality. I implemented a software test sub-system to enable hardware 'bring-up' and also created a 
-                UI PC simulation tool to mimic the (as yet undeveloped) UI. This later morphed into an I2C driven LED panel.
+                software quality. 
                 <br><br>
+                Standards included:<br>
+                - EN 12094<br>
+                - EN 54                
+                <br><br>
+                We were able to bring the new extinguishing product to a stage where we were undergoing type approvals with BRE 
+                testing house UK. 
+                <br>
+                <a href="https://bregroup.com/expertise/safety-security-fire"><img src="img/fia.jpg" width="100vw" alt="Fire industry association"></a>
             </div>
         </div>
     </div>
