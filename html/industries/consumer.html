@@ -6,11 +6,15 @@
 </head>
 <style>
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/kitchen.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/kitchen.jpg');
+        width:100vw; 
+        background-position: left;
         background-repeat: 1;
         background-size: cover;
-        min-width: 100vw;
-        min-height: 100vw;
+        position: page;
+        object-fit: fill;
+        min-width: 50vw;
+        min-height: 50vw;
     }
 
     @media (min-width: 400px) {
@@ -65,7 +69,7 @@
 <html>
 <body>
     <div class="container">
-        <img class = portrait src="img/baking.jpg" alt="Oven" padding-bottom="5vw">
+        <img class = portrait src="../../img/baking.jpg" alt="Oven" padding-bottom="5vw">
         <p1>Pyrolytic Oven</p1>
         <div class="text-block">
             <div>
@@ -77,7 +81,7 @@
                 <br><br>
                 Working in the kitchen research and development labs I was allowed the freedom to implement software for 
                 several experimental oven designs including a drawer oven and platform motor. We finally settled upon 
-                a facelift 90cm wall mounted pyrolitic self cleaning oven with full LCD graphical display
+                a facelift 90cm wall mounted pyrolitic self cleaning oven with full LED graphical display
                 <br><br>
                 I implemented the software architecture for a new Renesas-based platform complete with multi-processor 
                 control of GUI and PID element temperature management of the oven cavity based on food type and cooking function.
