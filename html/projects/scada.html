@@ -18,13 +18,15 @@
     }
 
     @media (min-width: 400px) {
-        p1 { font-size: 4vw; color: wheat; margin-left: 2vw; margin-right: 25vw;}
-        p2 { font-size: 1.5vw; color: white; margin-left: 2vw; margin-right: 25vw;}
+        p1 { font-size: 4vw; color: wheat; margin-left: 2vw;}
+        p2 { font-size: 3vw; color: wheat; }
+        p3 { font-size: 1.5vw; color: white; }
     }
 
     @media (max-width: 399px) {
-        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; margin-right: 0vw; }
-        p2 { font-size: 4vw; color: white; margin-left: 2vw; margin-right: 25vw;}
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw;}
+        p2 { font-size: 8vw; color: wheat;}
+        p3 { font-size: 4vw; color: white;}
     }
 
     .container {
@@ -73,12 +75,32 @@
         <p1>SCADA Radio</p1>
         <div class="text-block">
             <hr>
+            <p2>Aloha Protocol</p2><br>
+            ALOHA is basically a multiple access protocol which describes how all the terminals can access a medium without interfering 
+            at all with one another or even colliding. It operates at the data-link layer. Roberts created a protocol in 1972 that would
+            double the capacity of ALOHA.<br><br>
+
+            <p2>Slotted Aloha Protocol</p2><br>
+            In Slotted Aloha, the channel time is split into specific time slots. Data can only be sent at the start of a slot. If a 
+            station misses its slot, it has to wait for the next one. This makes collisions less likely.<br><br>
+
+            <p2>Random Access</p2><br>
+            Random access protocols refer to communication protocols used in computer networks. Hence, each device has an equal privilege to            
+            access the network and transmit data. These protocols allow nodes to send and receive data without taking turns or waiting for 
+            permission.<br><br>
+            <p2>Collision Detection</p2><br>
+            <p2>Carrier Sense</p2><br>
+            <p2>Error Correction</p2><br>
+            <p2>QAM</p2><br>
+            <p2>Retries</p2><br>
+            <p2>Throughput</p2><br><br>
+
             References:<br><br>
-            <a href="https://www.taitcommunications.com/about-us/our-history"><p2><u>- Tait Communications Ltd</u></p2></a><br>
-            <a href="https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System"><p2><u>- Conventional Mode CTCSS</u></p2></a><br>
-            <a href="https://en.wikipedia.org/wiki/Selcall"><p2><u>- Conventional Mode Selcall</u></p2></a><br>
-            <a href="https://en.wikipedia.org/wiki/MPT-1327"><p2><u>- MPT1327 Standard</u></p2></a><br>
-        </div>
+            <a href="https://en.wikipedia.org/wiki/Collision_detection"><p3><u>- Collision Detection</u></p3></a><br>
+            <a href="https://en.wikipedia.org/wiki/Carrier-sense_multiple_access"><p3><u>- Carrier Sense</u></p3></a><br>
+            <a href="https://en.wikipedia.org/wiki/Error_correction_code"><p3><u>- Forward Error Correction</u></p3></a><br>
+            
+         </div>
     </div>
 </body>
 </html>

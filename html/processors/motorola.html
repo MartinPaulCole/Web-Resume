@@ -2,11 +2,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payments</title>
+    <title>SPARC</title>
 </head>
 <style>
     body {
-        background-image: url('../../img/checkout.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/wellington-aerial-2.jpg');
         width:100vw; 
         background-position: left;
         background-repeat: 1;
@@ -14,8 +14,20 @@
         position: page;
         object-fit: fill;
         min-width: 50vw;
-        min-height: 50vw;
-}
+        min-height:50vw;
+    }
+  
+    @media (min-width: 400px) {
+        p1 { font-size: 4vw; color: blue rgb(red, rgb(87, 209, 87), blue); margin-left: 2vw; margin-right: 25vw;}
+    }
+
+    @media (max-width: 399px) {
+        p1 { font-size: 10vw; color:blue rgb(red, rgb(53, 160, 53), blue); margin-left: 2vw; margin-right: 0vw; }
+    }
+
+    .container {
+        position:center;
+    }
 
     @media (min-width: 400px) {
         p1 { font-size: 4vw; color: wheat; margin-left: 2vw; margin-right: 25vw;}
@@ -68,25 +80,11 @@
 <html>
 <body>
     <div class="container">
-        <img class = portrait src="../../img/terminal.jpg" alt="EFTPOS" padding-bottom="5vw">
-        <p1>Payment Solutions</p1>
+        <img class = portrait src="../../img/bed-of-nails.jpg" alt="Bed of Nails" padding-bottom="5vw">
+        <p1>SPARC Micro</p1>
         <div class="text-block">
-            <div>
-                <hr><br>
-                Electronic funds transfer at point of sale is an electronic payment system involving electronic 
-                funds transfers based on the use of payment cards, such as debit cards or credit cards, at payment 
-                terminals located at points of sale. EFTPOS technology was developed during the 1980s.
-
-                In Australia and New Zealand, it is also the brand name of a specific system used for such payments; 
-                these systems are country-specific and do not interconnect. Other countries use different brand names 
-                for their EFTPOS systems, such as NETS in Singapore. Since the early 2010s, country specific EFTPOS 
-                systems have been overtaken by global EMV based systems with contactless payments or QR code payment 
-                systems.
-
-                The payment cards used by EFTPOS systems are plastic cards complying with ISO/IEC 7810 ID-1 standard 
-                that have a bank card number conforming with the ISO/IEC 7812 numbering standard.
-                <br><br>
-            </div>
+        <hr>
+        The processors we used were SPARC-LEON <a href="https://en.wikipedia.org/wiki/LEON"><p3><u>(ref. LEON),</u></p3></a><br><br>
         </div>
     </div>
 </body>
