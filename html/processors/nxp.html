@@ -6,7 +6,7 @@
 </head>
 <style>
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/wellington-aerial-2.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/circuit-board.png');
         width:100vw; 
         background-position: left;
         background-repeat: 1;
@@ -31,10 +31,12 @@
 
     @media (min-width: 400px) {
         p1 { font-size: 4vw; color: wheat; margin-left: 2vw; margin-right: 25vw;}
+        p2 { font-size: 1.5vw; color: white; }
     }
 
     @media (max-width: 399px) {
         p1 { font-size: 10vw; color: wheat; margin-left: 2vw; margin-right: 0vw; }
+        p2 { font-size: 4vw; color: white; }
     }
 
     .container {
@@ -76,16 +78,32 @@
         margin-left: 80vw;
     }
 
+    p1hover{opacity:0.5;}
 </style>
 <html>
 <body>
     <div class="container">
         <img class = portrait src="../../img/bed-of-nails.jpg" alt="Bed of Nails" padding-bottom="5vw">
-        <p1>NXP Micro</p1>
-        <div class="text-block">
-        <hr>
-        Worked on LPC54606125<br>    
+        <a href="https://www.nxp.com/"><p1>NXP Micro</p1></a>
+        <div class="text-block"><hr>
+            The LPC5460x is a family of <a href="https://developer.arm.com/Processors/Cortex-M4"><p2><u>ARM Cortex-M4</u></p2></a>
+            based microcontrollers for embedded applications featuring a rich peripheral set with very low power consumption and
+            enhanced debug features.<br><br>
+            
+            The LPC54606 has Ten Flexcomm Interface serial peripherals. Each Flexcomm Interface can be selected by software to be 
+            a USART, SPI, or I2C interface. Two Flexcomm Interfaces also include an I2S interface. Each Flexcomm Interface includes 
+            a FIFO buffer that supports USART, SPI, and I2S if supported by that Flexcomm Interface. By ustilising this we were able 
+            to implement felxible USART (RS232, RS485) 8 and bit communications to both new and legacy peripherals.<br><br>
+            
+            It has a 12-bit, 12-channel, Analog-to-Digital Converter which was used to monitor actuator signals which are critical
+            to the safe operation of the system being controlled.<br><br>
+
+            The SysTick timer is an integral part of the Cortex-M4. The SysTick timer is intended to generate a fixed 10 millisecond 
+            interrupt for use by an operating system or other system management software. Since the SysTick timer is a part of the CPU, 
+            it facilitates porting of software by providing a standard timer that is available on ARM Cortex-based devices. This SysTick 
+            was used to schedule up to 30 run-to-completion tasks at varying rates depending on their priority. <br><br>
         </div>
     </div>
 </body>
 </html>
+
