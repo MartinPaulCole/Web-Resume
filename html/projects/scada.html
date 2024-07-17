@@ -6,7 +6,7 @@
 </head>
 <style>
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/oil.jpg');
+        background-image: linear-gradient(rgba(31, 19, 136, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/oil.jpg');
         width:100vw; 
         background-position: left;
         background-repeat: 1;
@@ -71,34 +71,44 @@
 <html>
 <body>
     <div class="container">
-        <img class = portrait src="../../img/scada.jpg" alt="SCADA Radio" padding-bottom="5vw">
+        <img class = portrait src="../../img/ripex.jpg" alt="SCADA Radio" padding-bottom="5vw">
         <p1>SCADA Radio</p1>
         <div class="text-block">
             <hr>
-            <p2>Aloha Protocol</p2><br>
-            ALOHA is basically a multiple access protocol which describes how all the terminals can access a medium without interfering 
-            at all with one another or even colliding. It operates at the data-link layer. Roberts created a protocol in 1972 that would
-            double the capacity of ALOHA.<br><br>
+            <p2>Radio Platform</p2><br>
+            VHF and UHF band, point to multipoint radios with 12.5KHz and 25KHz channels, FFSK, 4QAM, 16QAM and 64QAM modulation 
+            and AES encryption.<br><br>
 
-            <p2>Slotted Aloha Protocol</p2><br>
-            In Slotted Aloha, the channel time is split into specific time slots. Data can only be sent at the start of a slot. If a 
-            station misses its slot, it has to wait for the next one. This makes collisions less likely.<br><br>
+            <p2>First Stage - Aloha Protocol</p2><br>
+            The first stage of this project was to create a driver for a CML RF modem. 
+            <a href="https://cmlmicro.com/products/wireless-data"><p3><u>(ref. CML wireless data)</u></p3></a>
+            I implemented this using a state machine scheduling packets of up to 256 bytes in and out of the modem TX/RX buffer. 
+            This yielded 18% thoughput success due to collisions.<br><br>
 
-            <p2>Random Access</p2><br>
-            Random access protocols refer to communication protocols used in computer networks. Hence, each device has an equal privilege to            
-            access the network and transmit data. These protocols allow nodes to send and receive data without taking turns or waiting for 
-            permission.<br><br>
-            <p2>Collision Detection</p2><br>
-            <p2>Carrier Sense</p2><br>
-            <p2>Error Correction</p2><br>
-            <p2>QAM</p2><br>
-            <p2>Retries</p2><br>
-            <p2>Throughput</p2><br><br>
+            <p2>Second Stage - Carrier Sense</p2><br>
+            The second stage of our project was to use RF carrier sense feedback to allow transmission back-off when detecting the 
+            channel is busy. This was a feature provided by the modem. 
+            <a href="https://en.wikipedia.org/wiki/Carrier-sense_multiple_access"><p3><u>(ref. Carrier Sense Multiple Access)</u></p3></a> 
+            This doubled our throughout to 36%.<br><br>
 
-            References:<br><br>
-            <a href="https://en.wikipedia.org/wiki/Collision_detection"><p3><u>- Collision Detection</u></p3></a><br>
-            <a href="https://en.wikipedia.org/wiki/Carrier-sense_multiple_access"><p3><u>- Carrier Sense</u></p3></a><br>
-            <a href="https://en.wikipedia.org/wiki/Error_correction_code"><p3><u>- Forward Error Correction</u></p3></a><br>
+            <p2>Third Stage Slotted Aloha Protocol</p2><br>
+            Migrating from an RF Mesh <a href="https://en.wikipedia.org/wiki/Wireless_mesh_network"><p3><u>RF Mesh Network</u></p3></a>
+            to a Base Station controlled <a href="https://en.wikipedia.org/wiki/Star_network"><p3><u>Star Network</u></p3></a> 
+            I introduced a base station synchronisation message at 10ms intervals allowed us to reduce the length of the random access 
+            messages by a factor of more than 10 (depending on channel width). This increased measured throughput to 80%<br><br>
+
+            <p2>Collision Detection and Error Correction</p2><br>
+            Our project migrated from CML modem to XILINX FPGA implementation which allowed us to increase data rates via muliple levels of 
+            <a href="https://en.wikipedia.org/wiki/Quadrature_amplitude_modulation"><p3><u>Quadrature Amplitude Modulation</u></p3></a>.
+            
+            <a href="https://en.wikipedia.org/wiki/Error_correction_code"><p3><u>Forward Error Correction</u></p3></a> algorithms were 
+            implemented to counteract packet loss due to the increased error rates at longer ranges.
+            <a href="https://en.wikipedia.org/wiki/Collision_detection"><p3><u>(Ref. Collision Detection)</u></p3></a><br><br>
+
+            <p2>MAC layer and Network</p2><br>
+            I added a MAC layer on top of the modem driver to allow addressing of units and basic command response requests, retries
+            and back-offs. On top of this I implemented a network layer to allow routing of packets through more than one base station 
+            in the case of repeater networks.
             <br><br>
          </div>
     </div>
