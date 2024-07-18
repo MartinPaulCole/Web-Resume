@@ -19,15 +19,15 @@
     }
 
     @media (min-width: 400px) {
-        p1 { font-size: 4vw; color: wheat; margin-left: 2vw;}
-        p2 { font-size: 2vw; color: wheat; }
+        p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
+        p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
         p3 { font-size: 1.5vw; color: white; }
     }
 
     @media (max-width: 399px) {
-        p1 { font-size: 10vw; color: wheat; margin-left: 2vw;}
-        p2 { font-size: 6vw; color: wheat;}
-        p3 { font-size: 4vw; color: white;}
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
+        p2 { font-size: 5vw; color: wheat; }
+        p3 { font-size: 4vw; color: white; }
     }
 
     .container {
@@ -39,7 +39,7 @@
             font-size: 1.5vw; 
             color: white;
             position: absolute;
-            margin-left: 2vw;
+            margin-left: 8vw;
             margin-right: 25vw;
             width: 70vw;
             text-align: justify;
@@ -74,21 +74,23 @@
 <html>
 <body>
     <div class="container">
-        <a href="https://www.taitcommunications.com/about-us/our-history"><img class = portrait src="../../img/handhelds.jpg" alt="Mobile Radio" padding-bottom="5vw"></a>
+        <img class = portrait src="../../img/handhelds.jpg" alt="Mobile Radio" padding-bottom="5vw"></a>
         <p1>Mobile Radio</p1>
         <div class="text-block">
-            <hr>
+            <hr><br>
             <p2>Mobile and Handheld Radio Software Maintenance</p2><br>
             The products were VHF and UHF, point to point mobile and handheld radios with 12.5KHz and 25KHz channels, FFSK Conventional 
             <a href="https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System"><p3><u>Conventional Mode CTCSS</u></p3></a> 
             and Trunked Base-Station Controlled <a href="https://en.wikipedia.org/wiki/MPT-1327"><p3><u>MPT1327 Standard</u></p3></a><br><br>
-            I was originally employed in the Design Support team performing bug fixing and small enhancememnts on conventional and trunked
+            I was originally employed in the Design Support team performing bug fixing and small enhancemements on conventional and trunked
             mobile radios. The platform was Motorola MC68HC11 processors using assembly language. This evolved into a team leadership role 
             managing six software developers both windows and embedded.<br><br>
 
             <p2>Next Generation Mobile Radio Platform</p2><br>
             After several years I moved on to a team of ten engineers doing a ground up redevlopment of the aforementioned radio suite. 
-            The conventional radio  platform was a TIC5402 processor (conventional radios) and a Sparc LEON processor (truned radios). 
+            We were able to use the latest OOA and OOD techniques as well as what we had learned from the legacy devices to build on our 
+            collective experience and create a full suite of mobile radios ranging from basic conventional to trunked base-station controlled 
+            systems. The conventional radio  platform was a TIC5402 processor (conventional radios) and a Sparc LEON processor (trunked radios). 
             The language used was C. I worked specifically on the driver layer and then on to the UI with a focus on call queuing, 
             tone generation and various other UI tasks.
             <hr>

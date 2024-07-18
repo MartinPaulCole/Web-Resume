@@ -20,17 +20,16 @@
     }
   
     @media (min-width: 400px) {
-        p1 { font-size: 4vw; color: red; margin-left: 2vw;}
-        p2 { font-size: 2vw; color: wheat; }
+        p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
+        p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
         p3 { font-size: 1.5vw; color: white; }
     }
 
     @media (max-width: 399px) {
-        p1 { font-size: 10vw; color: red; margin-left: 2vw;}
-        p2 { font-size: 6vw; color: wheat;}
-        p3 { font-size: 4vw; color: white;}
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
+        p2 { font-size: 5vw; color: wheat; }
+        p3 { font-size: 4vw; color: white; }
     }
-
 
     .container {
         position:center;
@@ -41,7 +40,7 @@
             font-size: 1.5vw; 
             color: white;
             position: absolute;
-            margin-left: 2vw;
+            margin-left: 8vw;
             margin-right: 25vw;
             width: 70vw;
             text-align: justify;
@@ -60,16 +59,9 @@
          }
     }
 
-    img {
-        border-radius: 10vw;
-        width: 15vw;
-        height: 15vw;
-        margin-top: 0vw;
-        margin-left: 80vw;
-    }
-
     .portrait {
         position: absolute;
+        border-radius: 10vw;
         width: 15vw;
         height: 15vw;
         top: 0vw;
@@ -84,31 +76,48 @@
         <p1>Fire Extinguishing Panel</p1>
         <div class="text-block">
             <hr>
+            Working for an international building services company I was able to learn about fire extinguishing technology.
+            This began with supporting a legacy detection and extinguishing panel and moved on to developing the software for 
+            a new ground up solution. This comprised of a basic UI and main ARM-M4 controller which communicated with various 
+            analogue sensors and actuators.<hr>
+            <br><br>
             <a href="https://wahdatechnique.com/produit/tyco-fast2000-fire-alarm-and-extinguishing-panels-modules/"><p3>
-                <p2>Tyco FAST2000® Extinguishing Panels & Modules</p2></a><br>
-                The FAST2000/2 is a range of fire detection and extinguishing control panels for small, medium and large 
-                installations in industrial and commercial applications.<br><br>
+            <p2>Tyco FAST2000® Extinguishing Panels & Modules</p2></a><br>
+            The FAST2000/2 is a range of fire detection and extinguishing control panels for small, medium and large 
+            installations in industrial and commercial applications.<br><br>
 
-                The FAST2000 is based on the latest Tyco PBS Technology and conforms to EN54-2/-4 standard for Fire Alarm Panels, EN12094-1 
-                standard for extinguishing control systems and the VdS Guidelines.<br><br>
+            The FAST2000 is based on the latest Tyco PBS Technology and conforms to EN54-2/-4 standard for Fire Alarm Panels, EN12094-1 
+            standard for extinguishing control systems and the VdS Guidelines.<br><br>
 
-                One separate microprocessor for each extinguishing area controls the complex procedures between the intelligent analogue 
-                fire detectors and the control outputs that trigger alarms and extinguishing actions. Another microprocessor handles the 
-                control of the display and the internal communication.<br><br>
+            One separate microprocessor for each extinguishing area controls the complex procedures between the intelligent analogue 
+            fire detectors and the control outputs that trigger alarms and extinguishing actions. Another microprocessor handles the 
+            control of the display and the internal communication.<br><br>
 
-                At first the panel used detectors from <a href=" (https://systemsensoreurope.com/)"><p3><u>System Sensor.</u></p3></a>
-                Later, in-house developed sensors were used instead communicating via proprietary protocol.
+            At first the panel used detectors from <a href=" (https://systemsensoreurope.com/)"><p3><u>System Sensor.</u></p3></a>
+            Later, in-house developed sensors were used instead communicating via proprietary protocol.
             <br><br>
             <p2>EXM851 Extinguishing Panel</p2><br>
-                A new extingushing module was designed to replace the FAST2000. This was to implement only the extinguishing feature
-                and would communicate to an existing more up to date fire panel using MX protocol designed for other loop-connected devices.<br><br>
-                
-                An NXP ARM M4 processor was used to implement the actuator control (relays, valves, sounders) of a local zone.
-                I architected the driver layers, system level scheduler and timers as well as the I2C driven UI.
-                Initially I wrote a test mode interface for allowing board bring-up and test.<br><br>
+            A new extingushing module was designed to replace the FAST2000. This was to implement only the extinguishing feature
+            and would communicate to an existing more up to date fire panel using MX protocol designed for other loop-connected devices.<br><br>
+            
+            An NXP ARM M4 processor was used to implement the actuator control (relays, valves, sounders) of a local zone.
+            I architected the driver layers, system level scheduler and timers as well as the I2C driven UI.
+            Initially I wrote a test mode interface for allowing board bring-up and test.<br><br>
 
-                As the project progressed out team grew and I was involved more in the overseeing of the feature implementation.<hr>
-                <br><br>               
+            As the project progressed our team grew and I was involved more in the overseeing of the feature implementation.
+            <br><br>
+            Adhering to British, European and German national standards, consideration was made for MISRA and SIL2 level
+            software quality. 
+            <br><br>
+            Standards included:<br>
+            - EN 12094<br>
+            - EN 54                
+            <br><br>
+            We were able to bring the new extinguishing product to a stage where we were undergoing type approvals with BRE 
+            testing house UK. 
+            <br><br>
+            <a href="https://bregroup.com/expertise/safety-security-fire"><img src="../../img/fia.jpg" width="100vw" alt="Fire industry association"></a><hr>
+            <br><br>             
         </div>
     </div>
 </body>
