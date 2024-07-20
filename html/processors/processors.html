@@ -4,96 +4,81 @@
     <link rel="icon" type="image/x-icon" href="../../img/memory-chip.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microprocessors</title>
 </head>
 <style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/circuit-board.jpg');
+        width:100vw; 
+        background-position: left;
+        background-repeat: 1;
+        background-size: cover;
+        position: page;
+        object-fit: fill;
+        min-width: 50vw;
+        min-height: 50vw;
+    }
+  
     @media (min-width: 400px) {
-        body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/circuitbg.jpg');            
-            background-position: center;
-            background-repeat: 2;
-            background-size: cover;
-            position: relative;
-        }
+        p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
+        p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
+        p3 { font-size: 3vw; color: greenyellow; margin-left: 8vw;}
     }
 
     @media (max-width: 399px) {
-        body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('../../img/circuitbg.jpg');
-            background-position: center;
-            background-repeat: 2;
-            background-size: cover;
-            position: relative;
-        }
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
+        p2 { font-size: 5vw; color: wheat; }
+        p3 { font-size: 4vw; color: greenyellow; margin-left: 2vw;}
     }
 
-    @media screen and (min-width: 400px)
-    {
-        .portrait {
-            width: 4vw;
-            margin-left: 8vw;
-            background-color: aqua;
-        }
+    .portrait {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        top: 0vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 0vw;
+        margin-left: 80vw;
     }
 
-    @media screen and (max-width: 399px)
-    {
-        .portrait {
-            width: 9vw;
-            margin-left: 10vw;
-            background-color: aqua;
-        }
+    .bullet {
+        position: absolute;
+        margin-left: 8vw;
     }
 
-    @media (min-width: 400px) {
-        p1 { font-family: 'Agency FB'; font-size: 7vw; color: wheat; margin-left: 10vw;}
-        p2 { font-family: 'Agency FB'; font-size: 3vw; color: white; margin-left: 0vw;}
-    }
- 
-    @media (max-width: 399px) {
-        p1 { font-family: 'Agency FB'; font-size: 12vw; color: wheat; margin-left: 0vw; }
-        p2 { font-family: 'Agency FB'; font-size: 6vw; color: white; margin-left: 0vw;}
-    }
 
     p2:hover{opacity:0.5;}
+
 </style>
 
 <html>
 <body>
     <div>
-        <p1>Microprocessors</p1>
+        <p1>Microprocessors</p1><hr>
     </div>
     <div>
-        <hr><br><br>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="renesas.html"><p2>- Renesas</p2></a>
+        <br><br>
+        <a href="renesas.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - Renesas</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="atmel.html"><p2>- Atmel</p2></a>
+        <a href="atmel.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - Atmel</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="nxp.html"><p2>- NXP</p2></a>
+        <a href="nxp.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - NXP</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="motorola.html"><p2>- Motorola</p2></a>
+        <a href="motorola.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - Motorola</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="coldfire.html"><p2>- Coldfire</p2></a>
+        <a href="coldfire.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - Coldfire</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="ti.html"><p2>- Texas Instruments</p2></a>
+        <a href="ti.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - Texas Instruments</p3></a>
     </div>
     <div>
-        <img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="sparc.html"><p2>- SPARC</p2></a>
+        <a href="sparc.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - SPARC</p3></a>
     </div>
-    <div><img class="portrait" src="../../img/memory-chip.png" alt="Microchip">
-        <a href="st.html"><p2>- ST Micro</p2></a><hr>
+        <a href="st.html"><p3><img src="../../img/memory-chip.png" alt="Microchip"> - ST Micro</p3></a><hr>
     </div>
     <br><br>
 </body>
