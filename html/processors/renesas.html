@@ -11,7 +11,7 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/taipei-tower.jpg');
         width:100vw; 
         background-position: left;
-        background-repeat: 5;
+        background-repeat: 1;
         background-size: cover;
         position: page;
         object-fit: fill;
@@ -20,11 +20,15 @@
     }
 
     @media (min-width: 400px) {
-        p1 { font-size: 4vw; color: cyan; margin-left: 2vw; margin-right: 25vw;}
+        p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
+        p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
+        p3 { font-size: 1.5vw; color: white; }
     }
 
     @media (max-width: 399px) {
-        p1 { font-size: 10vw; color: cyan; margin-left: 0vw; margin-right: 0vw; }
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
+        p2 { font-size: 5vw; color: wheat; }
+        p3 { font-size: 4vw; color: white; }
     }
 
     .container {
@@ -33,14 +37,14 @@
 
     @media (min-width: 400px) {
         .text-block {
-            font-size: 2vw; 
+            font-size: 1.5vw; 
             color: white;
             position: absolute;
-            margin-left: 2vw;
+            margin-left: 8vw;
             margin-right: 25vw;
             width: 70vw;
             text-align: justify;
-        }
+         }
     }
 
     @media (max-width: 399px) {
@@ -55,21 +59,18 @@
          }
     }
 
-    img {
-        border-radius: 10vw;
-        width: 15vw;
-        height: 15vw;
-        margin-top: 0vw;
-        margin-left: 80vw;
-    }
-
     .portrait {
         position: absolute;
         width: 15vw;
         height: 15vw;
         top: 0vw;
-        right: 2vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 0vw;
+        margin-left: 80vw;
     }
+
+    a:hover { opacity: 0.5}
 
 </style>
 <html>
@@ -79,12 +80,14 @@
         <p1>Renesas Micro</p1>
         <div class="text-block">
             <hr>
-            Utilising Renesas M16C Processors to control oven temperature and graphical user displays.                                         
-            The main controller was located in the oven core and performed PID control of the oven
-            temperature based on the cooking function selected by the user.
+            Renesas M16C Processors were used while working on a ground-up oven controller project
+            <a href="../projects/oven.html"><p3><u>(Ref. Projects - Oven Controller).</p3></u></a><br><br> 
+            A master processor controlled the oven cavity core temperature using a variable PID algorithm 
+            based on the user selected oven function. It contained the main scheduler and IO drivers to 
+            switch cavity elements. 
             <br><br>
             A smaller slave M16C processor was used to drive a separate LCD display unit using DMA
-            and a Micrium graphics library to feed user functions and preferences to the main unit via
+            and a Micrium graphics library to feed user functions and preferences to the master unit via
             USART comms.
             <br><br>    
             I implemented a bare-metal scheduler to facilitate the software system.

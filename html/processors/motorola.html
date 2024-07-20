@@ -4,8 +4,6 @@
     <link rel="icon" type="image/x-icon" href="../../img/memory-chip.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    memory-chip.png
-    <title>Motorola</title>
 </head>
 <style>
     body {
@@ -79,18 +77,32 @@
 <html>
 <body>
     <div class="container">
-        <img class = portrait src="../../img/bed-of-nails.jpg" alt="Bed of Nails" padding-bottom="5vw">
-        <p1>Motorola 68HC11</p1>
+        <img class = portrait src="../../img/hc11.jpg" alt="Bed of Nails" padding-bottom="5vw">
+        <p1>Motorola Micros</p1>
         <div class="text-block">
         <hr>
-        The processors we used were <a href="https://en.wikipedia.org/wiki/Motorola_68HC11"><p3><u>Motorola MC68HC11.</u></p3></a><br><br>
-        Firstly we used 64k EEPROMs for storing code written in assembler. As the product and its eatures expanded we moved to 1MB external flash
-        devices using page switching. Thw HC11 did not have complex peripherals so in order to generate FFSK we needed to drive a GPIO directly via 
-        timed interrupt.<br><br>
+        Motorola processors were used in products which I supported while working in the mobile radio industry.
+        <a href="../projects/mobile.html"><p3><u>Mobile radio projects</u></p3></a><br><br>
+        The main processor I worked on  was the <a href="https://en.wikipedia.org/wiki/Motorola_68HC11"><p3><u>Motorola MC68HC11.</u></p3></a>
+        <br><br>
+        Firstly we used 64k EEPROMs for storing code written in assembler. As the product and its features expanded we moved to 2MB external flash
+        devices using page switching. The HC11 did not have complex peripherals so in order to generate FFSK we needed to drive a GPIO directly via 
+        timed interrupt. This was a time when microprocessors and external memory were making way for the microcontrollers we use today.
+        <br><br>
         Orion Emulators were used for debugging. They acted as plug-in ROM replacements. We were unable to step through code, however, as the Orions only had the 
         ability to monitor the data bus and even then only in 64K chunks. Instead, we relied on trace outputs. This became difficult when using paged memory
-        as we needed to select which page the code was in that we were tracing. Logic analysers were useful as an alternative to the Orions.<hr>
+        as we needed to select which page the code was in that we were tracing. Logic analysers were used as an (expensive) alternative to the Orions.
         <br><br>
+        Working at this time was a useful transition from university for me as it required an understanding of embbedded architectures (e.g. Intel vs Motorola). 
+        Having a background in electronics helped a great deal. Skills such as following schematics, understanding bus interference characteristics, 
+        consciousness of memory and processor speed. All things that are taken for granted in systems today. 
+        <hr><br>
+        <u>References</u><br>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Harvard_architecture"><p3><u>Ref. Harvard Architecture</u></p3></a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture"><p3><u>Ref. Von Neumann Achitecture</u></p3></a></li>
+        </ul>
+        <hr><br><br>
         </div>
     </div>
 </body>
