@@ -59,14 +59,25 @@
          }
     }
 
-    .portrait {
+    .portrait1 {
         position: absolute;
         width: 15vw;
         height: 15vw;
         top: 0vw;
         right: 3vw;
         border-radius: 20vw;
-        margin-top: 0vw;
+        margin-top: 1vw;
+        margin-left: 80vw;
+    }
+
+    .portrait2 {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        top: 0vw;
+        right: 20vw;
+        border-radius: 20vw;
+        margin-top: 1vw;
         margin-left: 80vw;
     }
 
@@ -76,12 +87,25 @@
 <html>
 <body>
     <div class="container">
-        <img class = portrait src="../../img/microprocessor.jpg" alt="Microprocessor" padding-bottom="5vw">
+        <div>
+            <img src = "../../img/atmel-logo.jpg" alt="Atmel logo">
+        </div>
+            <img class = portrait1 src="../../img/Atmega256.jpg" alt="Atmega256" padding-bottom="5vw">
+            <img class = portrait2 src="../../img/AVR32DA48.jpg" alt="AVR32DA48" padding-bottom="5vw">
         <p1>Atmel Micro</p1>
         <div class="text-block">
             <hr>
+            My fist experience of ATMEL processors is outlined in <a href="../projects/amr.html"><p3><u>AMR Project.</u></p3></a>
+            AVR Studio was used for debugging. The processor was an <a href="https://www.microchip.com/en-us/product/atmega2560"><p3><u>ATMega256</u></p3></a>
+            <br>
+            The code base was already in existence so my role was to modify it as per aforementioned project.<br>
+            <br>
+            My second experience of ATMEL processors is outlined in <a href="../projects/exm.html"><p3><u>EXM Project.</u></p3></a>
+            Microchip Studio was used for debugging. The processor was an <a href="https://www.microchip.com/en-us/product/AVR128DA48"><p3><u>AVR128DA48</u></p3></a>
+            An exising code base had been written for our fire detection sensors team. This was trimmed and modified to implement the USART protocol which
+            communicated with the master extinguishing module controller. It also drives GPIO to an ASIC implementd in-house to communicate to 
+            the main fire panels via the MX loop.
             <a href="https://cmlmicro.com/products/wireless-data"><p3><u>(ref. CML wireless data)</u></p3></a>
-            Work in progress
             <br><br>
         </div>
     </div>
