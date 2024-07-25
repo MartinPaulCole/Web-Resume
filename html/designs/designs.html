@@ -6,7 +6,7 @@
 <style>
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/curves.jpg');
-        width:100vw; 
+        width:100vw;
         background-position: left;
         background-repeat: 1;
         background-size: cover;
@@ -17,34 +17,61 @@
     }
 
     @media (min-width: 400px) {
-        p1 { font-family: 'Agency FB'; font-size: 7vw; color: wheat; margin-left: 10vw;}
-        p2 { font-family: 'Agency FB'; font-size: 3vw; color: white; margin-left: 0vw;}
+        p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
+        p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
+        p3 { font-size: 1.5vw; color: greenyellow; }
     }
- 
+
     @media (max-width: 399px) {
-        p1 { font-family: 'Agency FB'; font-size: 12vw; color: wheat; margin-left: 0vw; }
-        p2 { font-family: 'Agency FB'; font-size: 6vw; color: white; margin-left: 0vw;}
+        p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
+        p2 { font-size: 5vw; color: wheat; }
+        p3 { font-size: 4vw; color: greenyellow; }
     }
 
-    @media screen and (min-width: 400px)
-    {
-        .portrait {
-            width: 4vw;
-            margin-left: 10vw;
-            background-color: silver;
-        }
+    .container {
+        position:center;
     }
 
-    @media screen and (max-width: 399px)
-    {
-        .portrait {
-            width: 8vw;
-            margin-left: 10vw;
-            background-color: silver;
-        }
+    @media (min-width: 400px) {
+        .text-block {
+            font-size: 1.5vw;
+            color: white;
+            position: absolute;
+            margin-left: 8vw;
+            margin-right: 25vw;
+            width: 70vw;
+            text-align: justify;
+         }
     }
 
-    p2:hover{opacity:0.5;}
+    @media (max-width: 399px) {
+        .text-block {
+            font-size: 4vw;
+            color: white;
+            position: absolute;
+            margin-left: 2vw;
+            margin-right: 2vw;
+            width: 90vw;
+            text-align: justify;
+         }
+    }
+
+    .logo {
+        width: 20vw;
+    }
+
+    .portrait {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        top: 0vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 0vw;
+        margin-left: 80vw;
+    }
+
+    a:hover{opacity:0.5;}
 
 </style>
 <html>
@@ -53,8 +80,46 @@
         <div><p1>Design Philosophies</p1></div>
         <div class="text-block">
             <div><hr>
-                <p2>Waterfall pitfalls<br></p2>
-                <p2>Bare metal and Round Robin<br></p2>
+                <p2>Introduction</p2><hr>
+                The following is an overview of the design techniques and philosophies I have evolved over time while working
+                a number of projects from adding features to complete ground up new development. They apply to new features
+                and products only. It is not advisable to apply them when modifying existing code or fixing bugs. My approach to this
+                is outlined in my software maintenance description.<hr><br>
+
+                <p2>Top down design pitfalls<br></p2><hr>
+                Early on in the field Embedded Software development processors were small and lacked resource. The developers came
+                from electronics backgrounds. They were typical engineers who approached problem solving with a top-down perspective.
+                Attempts were made to gleen as much use of memory as possible. This resulted in extensive re-use of RAM and global variables.
+                Stack size was small and jumps backwards and forwards throughout code was common. This introduced a tendency for 'spaghetti' logic.
+                Functions were long and cumbersome and served multiple purposes whose side-effects were frequently difficult to characterise.
+                There was no concept of multiple threads and hence it was not uncommon to add code and find large latencies occurring in the
+                code that was already there. There was very little concept of layering and often interrupts were heavily overloaded with
+                unnecessary functionality in order to offset these latencies. Modularity was beginning to be a recognised concept but this only served to
+                group 'like code' with 'like functionality'. It added readability but the realtime performance was still often compromised.
+                <br><br>
+                <p2>Bare metal and Round Robin<br></p2> <hr>
+                Early embedded code was executed in a single loop (round robin) and no thought was given to the realtime priority of
+                specific tasks. Hence, UI updates occurred within the same timeframe as realtime data processing (often updated via
+                interrupt functions). In my experience this resulted in the absurd symptom of button presses being processed
+                too slowly, and their associated sounds and LED updates lagging accordingly. Meanwhile, timers and ADC interrupts were going
+                unserviced for, what relatively speaking, was millenia.
+                <br><br>
+                <p2>Modularity and reusability<br></p2><hr>
+                Modularity was a way of introducing the idea that functions should only perform one task. It meant that it could be
+                easily recognised and maintained without necessary knowledge of it's clients. This added readability, maintainability and
+                portability between platforms. It seems obvious but so often I find code today performing more than one duty whose side
+                effects need to be considered when modifying it. Alongside this concept came another of data encapsulation. Data corruption
+                was a very common problem. Squeezing data down into the location where it is actually used helped to do away with global
+                variables. It forced the programmer to think carefully about the data but this was a necessary effort to make. Taking a
+                'step back' and really considering the purpose of it and considering things such as:
+                <ul>
+                <li>Who owns it?</li>
+                <li>Should it retain its value?</li>
+                <li>Can it be modified?</li>
+                <li>Where is it located?</li>
+                <li>Who has access to it?</li>
+                <li>What is its real purpose?</li>
+                </ul>
                 <p2>Scheduling tasks<br></p2>
                 <p2>Idle time<br></p2>
                 <p2>State machines and events<br></p2>
@@ -67,8 +132,7 @@
                 <p2>Prioritisation<br></p2>
                 <p2>Interacting with hardware<br></p2>
                 <p2>Test interfaces<br></p2>
-                <p2>Function structure<br></p2>
-                <p2>Naming<br></p2>
+ 
                 <br><br>                
             </div>
         </div>
