@@ -1,7 +1,10 @@
 ﻿<!DOCTYPE html>
 <head>
+    <title>Architecture and Design</title>
+    <link rel="icon" type="image/x-icon" href="../../img/swlayer.png">
     <meta charset="utf-8" />
-    <title>Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
 </head>
 <style>
     body {
@@ -77,7 +80,8 @@
 <html>
 <body>
     <div class="container">
-        <div><p1>Design Philosophies</p1></div>
+        <div><p1>Software architecture and design</p1></div>
+        <img class = portrait src="../../img/interrupt.jpg" alt="Clock" padding-bottom="5vw">
         <div class="text-block">
             <div><hr>
                 <p2>Introduction</p2><hr>
@@ -97,7 +101,7 @@
                 unnecessary functionality in order to offset these latencies. Modularity was beginning to be a recognised concept but this only served to
                 group 'like code' with 'like functionality'. It added readability but the realtime performance was still often compromised.
                 <br><br>
-                <p2>Bare metal and Round Robin<br></p2> <hr>
+                            <p2>Bare metal and Round Robin<br></p2> <hr>
                 Early embedded code was executed in a single loop (round robin) and no thought was given to the realtime priority of
                 specific tasks. Hence, UI updates occurred within the same timeframe as realtime data processing (often updated via
                 interrupt functions). In my experience this resulted in the absurd symptom of button presses being processed
@@ -120,14 +124,26 @@
                 <li>Who has access to it?</li>
                 <li>What is its real purpose?</li>
                 </ul>
-                <p2>Scheduling tasks<br></p2>
-                <p2>Idle time<br></p2>
+                <br><br>
+                <p2>Idle time and interrupts</p2><hr>
+                Processors should spend 90% of their time <u>doing nothingu</u>. In a event driven system, the software should only spring into 
+                action when an interrupt occurs. Striving for this in software designs should be the goal of any architect. When interrupts occur, 
+                they should be short and quick. They should do very little except modify data. This data can be monitored at leisure externally 
+                by a 'loop'. This can involve multiple 'loops' all running at varying priorities and rates depending on the rate of change of their 
+                respective modified data. They also should be as short as possible so as not to take to much processor bandwidth.
+                An example of a low priority slow task is the updating of a display. An example of a high priority fast task is the reading of a
+                button press. Both of these are related to the UI but both exist at opposite ends of the software 'stack'.<br><br>
+
+                <p2>Scheduling tasks<br></p2><hr>
+                (Add tick scheduler description)<br><br>
+
+                <p2>Software Layering<br></p2><hr>
+                (Add layer description)<br><br>
+
                 <p2>State machines and events<br></p2>
                 <p2>Objects and the real world<br></p2>
                 <p2>Using interrupts<br></p2>
-                <p2>Modularity and reusability<br></p2>
                 <p2>Layering<br></p2>
-                <p2>Data encapsulation<br></p2>
                 <p2>Sharing data (configuration)<br></p2>
                 <p2>Prioritisation<br></p2>
                 <p2>Interacting with hardware<br></p2>
@@ -141,3 +157,4 @@
 </html>
 </body>
 </html>
+
