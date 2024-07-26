@@ -52,7 +52,7 @@
             font-size: 4vw;
             color: white;
             position: absolute;
-            margin-left: 2vw;
+            margin-left: 3vw;
             margin-right: 2vw;
             width: 90vw;
             text-align: justify;
@@ -72,6 +72,14 @@
         border-radius: 20vw;
         margin-top: 0vw;
         margin-left: 80vw;
+    }
+
+    .float {
+        float: left;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        margin-right: 3vw;
+        width: 50vw
     }
 
     a:hover{opacity:0.5;}
@@ -101,7 +109,7 @@
                 unnecessary functionality in order to offset these latencies. Modularity was beginning to be a recognised concept but this only served to
                 group 'like code' with 'like functionality'. It added readability but the realtime performance was still often compromised.
                 <br><br>
-                            <p2>Bare metal and Round Robin<br></p2> <hr>
+                <p2>Bare metal and Round Robin scheduling<br></p2> <hr>
                 Early embedded code was executed in a single loop (round robin) and no thought was given to the realtime priority of
                 specific tasks. Hence, UI updates occurred within the same timeframe as realtime data processing (often updated via
                 interrupt functions). In my experience this resulted in the absurd symptom of button presses being processed
@@ -124,9 +132,9 @@
                 <li>Who has access to it?</li>
                 <li>What is its real purpose?</li>
                 </ul>
-                <br><br>
+                <br>
                 <p2>Idle time and interrupts</p2><hr>
-                Processors should spend 90% of their time <u>doing nothingu</u>. In a event driven system, the software should only spring into 
+                Processors should spend 90% of their time <u>doing nothingu</u>. In an event driven system the software should only spring into 
                 action when an interrupt occurs. Striving for this in software designs should be the goal of any architect. When interrupts occur, 
                 they should be short and quick. They should do very little except modify data. This data can be monitored at leisure externally 
                 by a 'loop'. This can involve multiple 'loops' all running at varying priorities and rates depending on the rate of change of their 
@@ -134,21 +142,32 @@
                 An example of a low priority slow task is the updating of a display. An example of a high priority fast task is the reading of a
                 button press. Both of these are related to the UI but both exist at opposite ends of the software 'stack'.<br><br>
 
-                <p2>Scheduling tasks<br></p2><hr>
-                (Add tick scheduler description)<br><br>
-
-                <p2>Software Layering<br></p2><hr>
-                (Add layer description)<br><br>
-
-                <p2>State machines and events<br></p2>
+                <p2>Software layering and scheduling tasks<br></p2><hr>
+                A overview of how to structure a basic software architecture can be illustrated in the following block diagram.
+                It is a very simplistic view and can be expanded on an application by application basis. It is how I approach a software architecture and bring 
+                in other concepts as necessary. It can lend itself to porting an OS if necessary to allow inter-task messaging and pre-emption.                
+                <img class=float src="../../img/layers.jpg" alt="Clock" padding-bottom="5vw" padding-right="10vw">
+                Each block represents a thread which is executed at a rate determined by the scheduler and its task table. Generally the higher
+                the block is in the system the slower the rate at which it runs. A high resolution timer is used  as a system tick that parses the 
+                table updating the individual task ticks. Each thread should be kept as short as possible so as to allow the execution of the following thread.
+                Interrupts occur outside the scheduler and update driver data in realtime. This data is then parsed, conditioned and manipulated by the core task 
+                associated with it. This may involve averaging and bounds checking, for example. Once the data is in a usable state, the associated application
+                accesses it and makes decisions as to how the system should behave. It is here that multiple objects and classes may reside. State machines 
+                exist here and are transitioned by events coming from the interrupt layer and any change in data from the core layer. Any control is exerted 
+                either via HW drivers (e.g. USART, I2C interfaces) or direct GPIO (relays, switches etc).<br><br>
+                <p2>State machines, events and interrupts<br></p2>
+                Wherever possible, I am an advocate of state machines for each object. The philosphy is that each object in the software has a direct corresponding 
+                relationship with an object in the 'real world'. Hence its behaviour should match the behaviour of the 'real world' object. I avoid using 'flags'
+                at all costs as the need to add a flag is an indication that there is actually another state that hasn't been implemented.<br><br>
+                The state machine should only change state when an event occurs, otherwise it should be doing nothing (ref. 'Idle time and interrupts' above).
+                These events should be generated either directly or indirectly via interrupt or change of state of a neighbouring task. I dislike and avoid polling
+                of any kind as this creates a processor overhead that (as mentioned) 90% of the time results in nothing happening.<br><br>
                 <p2>Objects and the real world<br></p2>
                 <p2>Using interrupts<br></p2>
-                <p2>Layering<br></p2>
-                <p2>Sharing data (configuration)<br></p2>
+                   <p2>Sharing data (configuration)<br></p2>
                 <p2>Prioritisation<br></p2>
                 <p2>Interacting with hardware<br></p2>
-                <p2>Test interfaces<br></p2>
- 
+                <p2>Test interfaces<br></p2> 
                 <br><br>                
             </div>
         </div>
