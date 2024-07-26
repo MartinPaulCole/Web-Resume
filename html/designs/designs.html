@@ -74,12 +74,24 @@
         margin-left: 80vw;
     }
 
-    .float {
-        float: left;
-        margin-top: 2vw;
-        margin-bottom: 2vw;
-        margin-right: 3vw;
-        width: 50vw
+    @media (max-width: 399px) {
+        .float {
+            float: left;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            margin-right: 3vw;
+            width: 90vw
+        }
+    }
+
+    @media (min-width: 400px) {
+        .float {
+            float: left;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            margin-right: 3vw;
+            width: 50vw
+        }
     }
 
     a:hover{opacity:0.5;}
@@ -162,12 +174,17 @@
                 The state machine should only change state when an event occurs, otherwise it should be doing nothing (ref. 'Idle time and interrupts' above).
                 These events should be generated either directly or indirectly via interrupt or change of state of a neighbouring task. I dislike and avoid polling
                 of any kind as this creates a processor overhead that (as mentioned) 90% of the time results in nothing happening.<br><br>
-                <p2>Objects and the real world<br></p2>
-                <p2>Using interrupts<br></p2>
-                   <p2>Sharing data (configuration)<br></p2>
-                <p2>Prioritisation<br></p2>
-                <p2>Interacting with hardware<br></p2>
-                <p2>Test interfaces<br></p2> 
+                <p2>Objects and the real world<br></p2><hr>
+                A software architecture is made of multiple domains. A precursor to designing should be a domain analysis. In the diagram above we can see that the 
+                user interface block can consitute a domain which we can analyse. Within it we may observe that it can comprise real world objects such as button(s), 
+                display(s), sound(s)s. Each of these can can have their own states. Below these objects can be core objects which hold data related to these objects.
+                A way to think of these is to attempt to restrict any concept of the data from knowledge of the object they supply. For example, a button will have
+                states of 'pressed', 'released', 'toggled', 'long press'. The core object will hold the values of the button state in units such as voltage or current.
+                Timing functions can reside insde these core objects to determine the events to pass to the UI object. They can perform debouncing, thresholds 
+                and sample history. Below these are the driver objects. These are specific to the hardware platform being used. They have knowledge of the IO to sample.
+                They have knowledge of the interrupts to configure and respond to. When interrupts occur, the hardware drivers process the interrupt and read any 
+                data provided. For example, an ADC interrupt trigger can signal to the driver that a reading is available to be sampled and made available to the core 
+                object.<br><br>
                 <br><br>                
             </div>
         </div>
