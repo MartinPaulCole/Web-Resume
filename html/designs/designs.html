@@ -146,21 +146,21 @@
                 </ul>
                 <br>
                 <p2>Idle time and interrupts</p2><hr>
-                Processors should spend 90% of their time <u>doing nothingu</u>. In an event driven system the software should only spring into 
+                Processors should spend 90% of their time <u>doing nothing</u>. In an event driven system the software should only spring into 
                 action when an interrupt occurs. Striving for this in software designs should be the goal of any architect. When interrupts occur, 
                 they should be short and quick. They should do very little except modify data. This data can be monitored at leisure externally 
                 by a 'loop'. This can involve multiple 'loops' all running at varying priorities and rates depending on the rate of change of their 
-                respective modified data. They also should be as short as possible so as not to take to much processor bandwidth.
+                respective modified data. They also should be as short as possible so as not to take too much processor bandwidth.
                 An example of a low priority slow task is the updating of a display. An example of a high priority fast task is the reading of a
                 button press. Both of these are related to the UI but both exist at opposite ends of the software 'stack'.<br><br>
 
                 <p2>Software layering and scheduling tasks<br></p2><hr>
                 A overview of how to structure a basic software architecture can be illustrated in the following block diagram.
                 It is a very simplistic view and can be expanded on an application by application basis. It is how I approach a software architecture and bring 
-                in other concepts as necessary. It can lend itself to porting an OS if necessary to allow inter-task messaging and pre-emption.                
+                in other concepts as necessary. It can lend itself to porting an OS if required to allow inter-task messaging and pre-emption.                
                 <img class=float src="../../img/layers.jpg" alt="Clock" padding-bottom="5vw" padding-right="10vw">
-                Each block represents a thread which is executed at a rate determined by the scheduler and its task table. Generally the higher
-                the block is in the system the slower the rate at which it runs. A high resolution timer is used  as a system tick that parses the 
+                Each block represents a thread which is executed at a rate determined by the scheduler and its task table. It should be as short as possible.
+                Generally the higher the block is in the system the slower the rate at which it runs. A high resolution timer is used  as a system tick that parses the 
                 table updating the individual task ticks. Each thread should be kept as short as possible so as to allow the execution of the following thread.
                 Interrupts occur outside the scheduler and update driver data in realtime. This data is then parsed, conditioned and manipulated by the core task 
                 associated with it. This may involve averaging and bounds checking, for example. Once the data is in a usable state, the associated application
@@ -177,15 +177,22 @@
                 <p2>Objects and the real world<br></p2><hr>
                 A software architecture is made of multiple domains. A precursor to designing should be a domain analysis. In the diagram above we can see that the 
                 user interface block can consitute a domain which we can analyse. Within it we may observe that it can comprise real world objects such as button(s), 
-                display(s), sound(s)s. Each of these can can have their own states. Below these objects can be core objects which hold data related to these objects.
+                display(s), sound(s). Each of these can can have their own states. Below these objects can be core objects which hold data related to these objects.
                 A way to think of these is to attempt to restrict any concept of the data from knowledge of the object they supply. For example, a button will have
                 states of 'pressed', 'released', 'toggled', 'long press'. The core object will hold the values of the button state in units such as voltage or current.
-                Timing functions can reside insde these core objects to determine the events to pass to the UI object. They can perform debouncing, thresholds 
+                Timing functions can reside inside these core objects to determine the events to pass to the UI object. They can perform debouncing, thresholds 
                 and sample history. Below these are the driver objects. These are specific to the hardware platform being used. They have knowledge of the IO to sample.
                 They have knowledge of the interrupts to configure and respond to. When interrupts occur, the hardware drivers process the interrupt and read any 
                 data provided. For example, an ADC interrupt trigger can signal to the driver that a reading is available to be sampled and made available to the core 
-                object.<br><br>
-                <br><br>                
+                object. These too have state machines. Scheduling, performing and storing valid driver reads all have accompanying states. They can be as straightforward
+                as ADC priming and triggering to the scheduling of data into and out of an I2C port. Any peripheral which has a temporal component to its access requires a 
+                a state machine to drive it and interrupts to be used for state transition events.<br><br>
+                <p2>State machines<br></p2><hr>    
+                State machines can be implemented in several ways. My preferred method is by jump table. Each state action contains its own local data and requires 
+                no input parameters. Each event processed results in a different state action depending on the current state. The table is parsed on event reception 
+                and matches the event and current state to determine next state. An alternative is to provide switch statements that recieve events and process them 
+                directly but this is difficult to follow and can result in bloating of code and missing transitions. Using a jump table allows easy visualisation of 
+                the transitions and mimics a traditional state transition table. There is a small 'time' overhead in the parsing however.<br><br>
             </div>
         </div>
     </div>
