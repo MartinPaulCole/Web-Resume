@@ -194,12 +194,17 @@
                 directly but this is difficult to follow and can result in bloating of code and missing transitions. Using a jump table allows easy visualisation of 
                 the transitions and mimics a traditional state transition table. There is a small 'time' overhead in the parsing however.<br><br>
                 A common driver application is the sending and receiving of data via USART. 
-                <img class=float src="../../img/usart.jpg" alt="Clock" padding-bottom="5vw" padding-right="10vw"><br><br>
-                This is usually the first stage I perform of a new software development. It allows serial port access to a new embedded system which can be used to 
-                create a command line interface. This interface can then be used as a precursor to interacting directly with the internal registers, peripherals and 
-                gpio which are associated with a new system. Data can be fed into and out of it via a testmode application.
+                <img class=float src="../../img/usart.jpg" alt="Clock" padding-bottom="5vw" padding-right="10vw"><br><br> As the following diagram illustrates, 
+                a state machine is implemented that schedules data into a tansmitter buffer and processes receive bytes as the USART interrupt occurs.
+                This is usually the first stage I perform in a new software development. It allows serial port access to the system in lieu of the full application and 
+                associated user interface. It can be used to create a command line interface. This can then be used as a precursor to interacting  directly 
+                with internal registers, peripherals and gpio which are associated with a new system. It can then evolve to interact with other layers and applications.
                 <img class=float src="../../img/test-mode.jpg" alt="Clock" padding-bottom="5vw" padding-right="10vw"><br><br>
-
+                Data can be fed into and out of it via a testmode application. This application can be added to as firmware
+                development progresses. It can be used to access the core objects to stimulate code paths that would otherwise require real world inputs. Hence it 
+                lends itself to being used for automated test. Scripts can be written that bypass normal program flow to exercise various of the applications which would
+                otherwise take time if done manually. Caution should be used when interacting with lower layers of the software however. Implementing a 'test mode'
+                operation is advised in this case. Certain tasks can be switched on and off in this mode.
             </div>
         </div>
     </div>
