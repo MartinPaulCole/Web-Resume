@@ -58,9 +58,17 @@
          }
     }
 
-    .logo {
-        margin-left: 8vw;
-        width: 20vw;
+    @media (min-width: 400px) {
+        .logo {
+            margin-left: 8vw;
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .logo {
+            width: 20vw;
+        }
     }
 
     .portrait {
@@ -105,7 +113,8 @@
             The SysTick timer is an integral part of the Cortex-M4. The SysTick timer is intended to generate a fixed 10 millisecond 
             interrupt for use by an operating system or other system management software. Since the SysTick timer is a part of the CPU, 
             it facilitates porting of software by providing a standard timer that is available on ARM Cortex-based devices. This SysTick 
-            was used to schedule up to 30 run-to-completion tasks at varying rates depending on their priority. <br><br>
+            was used to schedule up to 30 run-to-completion tasks at varying rates depending on their priority. 
+            <br><hr>
         </div>
     </div>
 </body>

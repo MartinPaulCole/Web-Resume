@@ -58,9 +58,17 @@
          }
     }
 
-    .logo {
-        margin-left: 8vw;
-        width: 20vw;
+    @media (min-width: 400px) {
+        .logo {
+            margin-left: 8vw;
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .logo {
+            width: 20vw;
+        }
     }
 
     .portrait {
@@ -99,7 +107,9 @@
             <br><br>    
             I implemented a bare-metal scheduler to facilitate the software system.
             <br><br>
-            The IDE used was HEW and KD30 and E8 on-chip debugger.
+            The IDE used was <a href="https://www.renesas.com/us/en/software-tool/high-performance-embedded-workshopl"><p3><u>HEW</p3></u></a>
+            and KD30 and E8 on-chip debugger.
+            <br><hr>
         </div>
     </div>
 </body>

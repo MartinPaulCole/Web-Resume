@@ -58,9 +58,17 @@
          }
     }
 
-    .logo {
-        width: 20vw;
-        margin-left: 8vw;
+    @media (min-width: 400px) {
+        .logo {
+            margin-left: 8vw;
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .logo {
+            width: 30vw;
+        }
     }
 
     .portrait1 {
@@ -111,7 +119,7 @@
             communicated with the master extinguishing module controller. It also drives GPIO to an ASIC implementd in-house to communicate to 
             the main fire panels via the MX loop.
             <a href="https://cmlmicro.com/products/wireless-data"><p3><u>(ref. CML wireless data)</u></p3></a>
-            <br><br>
+            <br><hr>
         </div>
     </div>
 </body>

@@ -58,9 +58,17 @@
          }
     }
 
-    .logo {
-        margin-left: 8vw;
-        width: 20vw;
+    @media (min-width: 400px) {
+        .logo {
+            margin-left: 8vw;
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .logo {
+            width: 30vw;
+        }
     }
 
     .portrait {
@@ -91,6 +99,7 @@
             were used during development of the SCADA radio outlined in <a href="../projects/scada.html"><p3><u>SCADA Radio Projects.</u></u></p3></u></a>
             The IDE was <a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME"><p3><u>Freescale Code Warrior.</u></p3></u></a>
             The operating system used was <a href="https://www.silabs.com/developers/micrium"><p3><u>MicroC OS</u></p3></u></a>.
+            <br><hr>
         </div>
     </div>
 </body>

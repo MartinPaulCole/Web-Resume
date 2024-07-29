@@ -58,9 +58,17 @@
          }
     }
 
-    .logo {
-        margin-left: 8vw;
-        width: 20vw;
+    @media (min-width: 400px) {
+        .logo {
+            margin-left: 8vw;
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 399px) {
+        .logo {
+            width: 20vw;
+        }
     }
 
     .portrait1 {
@@ -97,7 +105,8 @@
             <img class = portrait1 src="../../img/c5402.png" alt="Texas Instruments" padding-bottom="5vw">
             <img class = portrait2 src="../../img/sparc.jpg" alt="SpARC" padding-bottom="5vw">
             <br><br>
-        <p1>Texas Instruments & SPARC</p1>
+        <p1>Texas Instruments<br></p1>
+        <p1>& SPARC</p1>
         <div class="text-block">
             <hr><br>Texas Instruments 
             <a href="https://en.wikipedia.org/wiki/NXP_ColdFire"><p3><u>Texas Instruments  processors</u></p3></u></a>
@@ -105,6 +114,7 @@
             The IDE was <a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME"><p3><u>Freescale Code Warrior.</u></p3></u></a>
             The operating system used was <a href="https://en.wikipedia.org/wiki/ECos"><p3><u>ECOS</u></p3></u></a>.
             <a href=" https://en.wikipedia.org/wiki/LEON"><p3><u>SPARC LEON</u></p3></u></a> processors were used in the high tier radio products.
+            <br><hr>
         </div>
     </div>
 </body>
