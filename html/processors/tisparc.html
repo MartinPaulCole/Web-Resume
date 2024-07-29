@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <head>
-    <title>Renesas</title>
+    <title>Texas Instruments</title>
     <link rel="icon" type="image/x-icon" href="../../img/memory-chip.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/circuit-board.jpg');
         width:100vw; 
         background-position: left;
-        background-repeat: 1;
+        background-repeat: 5;
         background-size: cover;
         position: page;
         object-fit: fill;
@@ -21,13 +21,13 @@
     @media (min-width: 400px) {
         p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
         p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
-        p3 { font-size: 1.5vw; color: greenyellow; }
+        p3 { font-size: 1.5vw; color: yellow; }
     }
 
     @media (max-width: 399px) {
         p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
         p2 { font-size: 5vw; color: wheat; }
-        p3 { font-size: 4vw; color: greenyellow; }
+        p3 { font-size: 4vw; color: yellow; }
     }
 
     .container {
@@ -63,14 +63,25 @@
         width: 20vw;
     }
 
-    .portrait {
+    .portrait1 {
         position: absolute;
         width: 15vw;
         height: 15vw;
         top: 0vw;
         right: 3vw;
         border-radius: 20vw;
-        margin-top: 0vw;
+        margin-top: 1vw;
+        margin-left: 80vw;
+    }
+
+    .portrait2 {
+        position: absolute;
+        width: 15vw;
+        height: 15vw;
+        top: 15vw;
+        right: 3vw;
+        border-radius: 20vw;
+        margin-top: 1vw;
         margin-left: 80vw;
     }
 
@@ -79,27 +90,21 @@
 </style>
 <html>
 <body>
-     <div class="container">
+    <div class="container">
         <div>
-            <img class = logo src="../../img/renesas-logo.png" alt="Renesas logo">
+            <img class = logo src = "../../img/ti-logo.png" alt="Atmel logo">
         </div>
-        <img class = portrait src="../../img/circuit.jpg" alt="Renesas" padding-bottom="5vw">
-        <p1>Renesas Micro</p1>
+            <img class = portrait1 src="../../img/c5402.png" alt="Texas Instruments" padding-bottom="5vw">
+            <img class = portrait2 src="../../img/sparc.jpg" alt="SpARC" padding-bottom="5vw">
+            <br><br>
+        <p1>Texas Instruments & SPARC</p1>
         <div class="text-block">
-            <hr>
-            Renesas M16C Processors were used while working on a ground-up oven controller project
-            <a href="../projects/oven.html"><p3><u>(Ref. Projects - Oven Controller).</p3></u></a><br><br> 
-            A master processor controlled the oven cavity core temperature using a variable PID algorithm 
-            based on the user selected oven function. It contained the main scheduler and IO drivers to 
-            switch cavity elements. 
-            <br><br>
-            A smaller slave M16C processor was used to drive a separate LCD display unit using DMA
-            and a Micrium graphics library to feed user functions and preferences to the master unit via
-            USART comms.
-            <br><br>    
-            I implemented a bare-metal scheduler to facilitate the software system.
-            <br><br>
-            The IDE used was HEW and KD30 and E8 on-chip debugger.
+            <hr><br>Texas Instruments 
+            <a href="https://en.wikipedia.org/wiki/NXP_ColdFire"><p3><u>Texas Instruments  processors</u></p3></u></a>
+            were used during development of the next generation mobile radios outlined in <a href="../projects/mobile.html"><p3><u>Mobile Radio Projects.</u></u></p3></u></a>
+            The IDE was <a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME"><p3><u>Freescale Code Warrior.</u></p3></u></a>
+            The operating system used was <a href="https://en.wikipedia.org/wiki/ECos"><p3><u>ECOS</u></p3></u></a>.
+            <a href=" https://en.wikipedia.org/wiki/LEON"><p3><u>SPARC LEON</u></p3></u></a> processors were used in the high tier radio products.
         </div>
     </div>
 </body>

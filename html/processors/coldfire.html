@@ -4,11 +4,10 @@
     <link rel="icon" type="image/x-icon" href="../../img/memory-chip.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coldfire</title>
 </head>
 <style>
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/taipei-tower.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/circuit-board.jpg');
         width:100vw; 
         background-position: left;
         background-repeat: 5;
@@ -22,13 +21,13 @@
     @media (min-width: 400px) {
         p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
         p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
-        p3 { font-size: 1.5vw; color: greenyellow; }
+        p3 { font-size: 1.5vw; color: yellow; }
     }
 
     @media (max-width: 399px) {
         p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
         p2 { font-size: 5vw; color: wheat; }
-        p3 { font-size: 4vw; color: greenyellow; }
+        p3 { font-size: 4vw; color: yellow; }
     }
 
     .container {
@@ -59,6 +58,11 @@
          }
     }
 
+    .logo {
+        margin-left: 8vw;
+        width: 20vw;
+    }
+
     .portrait {
         position: absolute;
         width: 15vw;
@@ -76,11 +80,17 @@
 <html>
 <body>
      <div class="container">
-        <img class = portrait src="../../img/circuit-board.jpg" alt="Coldfire" padding-bottom="5vw">
+        <div>
+            <img class = logo src = "../../img/nxp-logo.png" alt="NXP logo">
+        </div>
+        <img class = portrait src="../../img/coldfire.jpg" alt="Coldfire" padding-bottom="5vw">
         <p1>Coldfire</p1>
         <div class="text-block">
-            Work in progress
-            <hr>
+            <hr><br>Coldfire processors 
+            <a href="https://en.wikipedia.org/wiki/NXP_ColdFire"><p3><u>Freescale Coldfire processors</u></p3></u></a>
+            were used during development of the SCADA radio outlined in <a href="../projects/scada.html"><p3><u>SCADA Radio Projects.</u></u></p3></u></a>
+            The IDE was <a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME"><p3><u>Freescale Code Warrior.</u></p3></u></a>
+            The operating system used was <a href="https://www.silabs.com/developers/micrium"><p3><u>MicroC OS</u></p3></u></a>.
         </div>
     </div>
 </body>
