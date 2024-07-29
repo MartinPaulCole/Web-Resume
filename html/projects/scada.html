@@ -21,13 +21,13 @@
     @media (min-width: 400px) {
         p1 { font-size: 4vw; color: wheat; margin-left: 8vw; }
         p2 { font-size: 2vw; color: wheat; margin-left: 0vw; }
-        p3 { font-size: 1.5vw; color: greenyellow; }
+        p3 { font-size: 1.5vw; color: wheat; }
     }
 
     @media (max-width: 399px) {
         p1 { font-size: 10vw; color: wheat; margin-left: 2vw; }
         p2 { font-size: 5vw; color: wheat; }
-        p3 { font-size: 4vw; color: greenyellow; }
+        p3 { font-size: 4vw; color: wheat; }
     }
 
     .container {
@@ -82,31 +82,31 @@
             Following a break from telecoms of a few years I joined a company developing a new mulit-point SCADA 
             radio to complement their exisitng point to point high-speed data radio products. This was a new challenge 
             for the company and my role was to optimise channel throughput implementing the driver, MAC and network 
-            layers of the software protocol stack.<hr>
+            layers of the software protocol stack.
             <br><br>
-            <p2>Radio Platform</p2><br>
+            <p2>Radio Platform</p2><hr>
             VHF and UHF band, point to multipoint radios with 12.5KHz and 25KHz channels, FFSK, 4QAM, 16QAM and 64QAM modulation 
             and AES encryption.<br><br>
 
-            <p2>First Stage - Aloha Protocol</p2><br>
+            <p2>Aloha Protocol</p2><hr>
             The first stage of this project was to create a driver for a CML RF modem. 
             <a href="https://cmlmicro.com/products/wireless-data"><p3><u>(ref. CML wireless data)</u></p3></a>
             I implemented this using a state machine scheduling packets of up to 256 bytes in and out of the modem TX/RX buffer. 
             This yielded 18% thoughput success due to collisions.<br><br>
 
-            <p2>Second Stage - Carrier Sense</p2><br>
+            <p2>Carrier Sense</p2><hr>
             The second stage of our project was to use RF carrier sense feedback to allow transmission back-off when detecting the 
             channel is busy. This was a feature provided by the modem. 
             <a href="https://en.wikipedia.org/wiki/Carrier-sense_multiple_access"><p3><u>(ref. Carrier Sense Multiple Access)</u></p3></a> 
             This doubled our throughout to 36%.<br><br>
 
-            <p2>Third Stage Slotted Aloha Protocol</p2><br>
+            <p2>Slotted Aloha Protocol</p2><hr>
             Migrating from an RF Mesh <a href="https://en.wikipedia.org/wiki/Wireless_mesh_network"><p3><u>RF Mesh Network</u></p3></a>
             to a Base Station controlled <a href="https://en.wikipedia.org/wiki/Star_network"><p3><u>Star Network</u></p3></a> 
             I introduced a base station synchronisation message at 10ms intervals allowed us to reduce the length of the random access 
             messages by a factor of more than 10 (depending on channel width). This increased measured throughput to 80%<br><br>
 
-            <p2>Collision Detection -Correction</p2><br>
+            <p2>Collision Detection - Error Correction</p2><hr>
             Our project migrated from CML modem to XILINX FPGA implementation which allowed us to increase data rates via muliple levels of 
             <a href="https://en.wikipedia.org/wiki/Quadrature_amplitude_modulation"><p3><u>Quadrature Amplitude Modulation</u></p3></a>.
             
@@ -114,7 +114,7 @@
             implemented to counteract packet loss due to the increased error rates at longer ranges.
             <a href="https://en.wikipedia.org/wiki/Collision_detection"><p3><u>(Ref. Collision Detection)</u></p3></a><br><br>
 
-            <p2>MAC layer and Network</p2><br>
+            <p2>MAC layer and Network</p2><hr>
             I added a MAC layer on top of the modem driver to allow addressing of units and basic command response requests, retries
             and back-offs. On top of this I implemented a network layer to allow routing of packets through more than one base station 
             in the case of repeater networks.<hr>
