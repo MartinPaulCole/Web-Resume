@@ -184,7 +184,7 @@
                 object. These too have state machines. Scheduling, performing and storing valid driver reads all have accompanying states. They can be as straightforward
                 as ADC priming and triggering to the scheduling of data into and out of an I2C port. Any peripheral which has a temporal component to its access requires a 
                 a state machine to drive it and interrupts to be used for state transition events.<br><br>
-                <p2>State machines<br></p2><hr>    
+                <p2>State machine example<br></p2><hr>    
                 State machines can be implemented in several ways. My preferred method is by jump table. Each state action contains its own local data and requires 
                 no input parameters. Each event processed results in a different state action depending on the current state. The table is parsed on event reception 
                 and matches the event and current state to determine next state. An alternative is to provide switch statements that recieve events and process them 
